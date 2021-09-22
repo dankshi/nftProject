@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { connect } from "./redux/blockchain/blockchainActions";
 import { fetchData } from "./redux/data/dataActions";
 import coverPhoto from "./assets/website/cover.jpg";
-import { Button, Container, Header, Image } from 'semantic-ui-react'
+import { Button, Container, Header, Image, Menu, Progress, Segment, Label, Grid } from 'semantic-ui-react'
 
 function App() {
   const dispatch = useDispatch();
@@ -11,10 +11,8 @@ function App() {
   const data = useSelector((state) => state.data);
   const [feedback, setFeedback] = useState("");
   const [claimingNft, setClaimingNft] = useState(false);
-  const [mintCost, setMintCost] = useState(9);
-  
-
-
+  const mintCost = data.cost / (10 ** 18);
+  const auctionCosts = [2, 1.5, 1, .75, .5, .25, .15, .1]
   const claimNFTs = (_amount) => {
     if (_amount <= 0) {
       return;
@@ -66,10 +64,13 @@ function App() {
   }, [blockchain.account]);
 
   return (
-    <Container>
-        <Header>
-            {data.totalSupply}/11111
-        </Header>
+    <div>
+    <Menu fixed='top' inverted>
+      <Container>
+        <Menu.Item header>DRIFTERS</Menu.Item>
+      </Container>
+    </Menu>
+    <Container textAlign='center' style={{ marginTop: '7em' }}>
         <Container>
           <Container>
             {Number(data.totalSupply) == 11111 ? (
@@ -84,9 +85,6 @@ function App() {
               </>
             ) : (
               <>
-                <Header>
-                  {data.cost / (10 ** 18)} ETH
-                </Header>
                 <Header>
                   {feedback}
                 </Header>
@@ -112,6 +110,30 @@ function App() {
                   </Container>
                 ) : (
                   <Container>
+                          <div>
+        <Progress percent={(data.totalSupply/100) * 100} active color='orange' progress>
+          <Header>
+            {data.totalSupply} / 11111 MINTED
+            </Header>
+        </Progress>
+
+          <Grid columns='equal'>
+            <Grid.Column>
+            </Grid.Column>
+            <Grid.Column>
+        <Segment id='mintCostSpread' compact textAlign='center'>
+                {auctionCosts.map((cost) => (
+                  <Label size ='mini' color={mintCost == cost ? 'teal' : 'grey'} key={cost}>
+                    {cost} ETH
+                  </Label>
+                ))}
+                </Segment>
+        
+            </Grid.Column>
+            <Grid.Column>
+            </Grid.Column>
+          </Grid>
+          </div>
                     <Button primary
                       disabled={claimingNft ? 1 : 0}
                       onClick={(e) => {
@@ -129,17 +151,9 @@ function App() {
           </Container>
         </Container>
         <Container>
-          <Header>
-            Please make sure you are connected to the right network (Polygon
-            Mainnet) and the correct address. Please note: Once you make the
-            purchase, you cannot undo this action.
-          </Header>
-          <Header>
-            We have set the gas limit to 285000 for the contract to successfully
-            mint your NFT. We recommend that you don't change the gas limit.
-          </Header>
       </Container>
     </Container>
+    </div>
   );
 }
 
