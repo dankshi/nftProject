@@ -120,7 +120,7 @@ function App() {
             ai={"center"}
             style={{ backgroundColor: "#383838", padding: 24 }}
           >
-            {Number(data.totalSupply) == 1000 ? (
+            {Number(data.totalSupply) == 11111 ? (
               <>
                 <s.TextTitle style={{ textAlign: "center" }}>
                   The sale has ended.
@@ -139,12 +139,9 @@ function App() {
             ) : (
               <>
                 <s.TextTitle style={{ textAlign: "center" }}>
-                  1 NCC costs 100 MATIC.
+                  {data.cost} + gas
                 </s.TextTitle>
                 <s.SpacerXSmall />
-                <s.TextDescription style={{ textAlign: "center" }}>
-                  Excluding gas fee.
-                </s.TextDescription>
                 <s.SpacerSmall />
                 <s.TextDescription style={{ textAlign: "center" }}>
                   {feedback}
@@ -153,9 +150,6 @@ function App() {
                 {blockchain.account === "" ||
                 blockchain.smartContract === null ? (
                   <s.Container ai={"center"} jc={"center"}>
-                    <s.TextDescription style={{ textAlign: "center" }}>
-                      Connect to the Polygon network
-                    </s.TextDescription>
                     <s.SpacerSmall />
                     <StyledButton
                       onClick={(e) => {
