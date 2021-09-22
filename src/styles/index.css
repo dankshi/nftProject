@@ -1,0 +1,10 @@
+.ui {
+    font-family: "Montserrat" !important;
+    color: white !important;
+}
+
+body{
+    background-image: url('../assets//website//cover.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}

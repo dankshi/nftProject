@@ -67,9 +67,7 @@ function App() {
 
   return (
     <Container>
-      <Image src={coverPhoto}></Image>
         <Header>
-          D R I F T E R S
             {data.totalSupply}/11111
         </Header>
         <Container>
