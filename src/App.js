@@ -5,6 +5,7 @@ import { fetchData } from "./redux/data/dataActions";
 import * as s from "./styles/globalStyles";
 import styled from "styled-components";
 import i1 from "./assets/images/1.png";
+import coverPhoto from "./assets/website/cover.jpg";
 
 export const StyledButton = styled.button`
   padding: 10px;
@@ -53,22 +54,25 @@ function App() {
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
-  const [feedback, setFeedback] = useState("Maybe it's your lucky day.");
+  const [feedback, setFeedback] = useState("");
   const [claimingNft, setClaimingNft] = useState(false);
+  const [mintCost, setMintCost] = useState(9);
+  
+
 
   const claimNFTs = (_amount) => {
     if (_amount <= 0) {
       return;
     }
-    setFeedback("Minting your Nerdy Coder Clone...");
+    setFeedback("Minting... Check your MetaMask");
     setClaimingNft(true);
     blockchain.smartContract.methods
       .mint(blockchain.account, _amount)
       .send({
         gasLimit: "285000",
-        to: "0x827acb09a2dc20e39c9aad7f7190d9bc53534192",
+        to: "0x4605c4aF414838EB12Fe9Fc0c89FaDB10296793B",
         from: blockchain.account,
-        value: blockchain.web3.utils.toWei((100 * _amount).toString(), "ether"),
+        value: (data.cost * _amount),
       })
       .once("error", (err) => {
         console.log(err);
@@ -77,7 +81,7 @@ function App() {
       })
       .then((receipt) => {
         setFeedback(
-          "WOW, you now own a Nerdy Coder Clone. go visit Opensea.io to view it."
+          "Mint Success"
         );
         setClaimingNft(false);
         dispatch(fetchData(blockchain.account));
@@ -85,10 +89,22 @@ function App() {
   };
 
   const getData = () => {
-    if (blockchain.account !== "" && blockchain.smartContract !== null) {
-      dispatch(fetchData(blockchain.account));
+    if (blockchain.smartContract !== null) {
+      dispatch(fetchData());
+      // setMintCost(blockchain.web3.utils.fromWei(data.cost.toString(), "ether"));
     }
   };
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      console.log('fetchData');
+      dispatch(fetchData());
+    }
+      , 1000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
 
   useEffect(() => {
     getData();
@@ -100,7 +116,7 @@ function App() {
         <s.TextTitle
           style={{ textAlign: "center", fontSize: 28, fontWeight: "bold" }}
         >
-          Mint a Nerdy Coder Clone
+          D R I F T E R S
         </s.TextTitle>
         <s.SpacerMedium />
         <ResponsiveWrapper flex={1} style={{ padding: 24 }}>
@@ -110,7 +126,7 @@ function App() {
             <s.TextTitle
               style={{ textAlign: "center", fontSize: 35, fontWeight: "bold" }}
             >
-              {data.totalSupply}/1000
+              {data.totalSupply}/11111
             </s.TextTitle>
           </s.Container>
           <s.SpacerMedium />
@@ -127,10 +143,9 @@ function App() {
                 </s.TextTitle>
                 <s.SpacerSmall />
                 <s.TextDescription style={{ textAlign: "center" }}>
-                  You can still find Nerdy Coder Clones on{" "}
                   <a
                     target={"_blank"}
-                    href={"https://opensea.io/collection/nerdy-coder-clones"}
+                    href={"https://opensea.io/"}
                   >
                     Opensea.io
                   </a>
@@ -139,7 +154,7 @@ function App() {
             ) : (
               <>
                 <s.TextTitle style={{ textAlign: "center" }}>
-                  {data.cost} + gas
+                  {data.cost / (10 ** 18)} ETH
                 </s.TextTitle>
                 <s.SpacerXSmall />
                 <s.SpacerSmall />
