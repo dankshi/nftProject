@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { connect } from "./redux/blockchain/blockchainActions";
 import { fetchData } from "./redux/data/dataActions";
 import coverPhoto from "./assets/website/cover.jpg";
-import { Button, Container, Header, Image, Menu, Progress, Segment, Label, Grid } from 'semantic-ui-react'
+import { Button, Container, Header, Image, Menu, Progress, Segment, Label, Grid, Divider } from 'semantic-ui-react'
 
 function App() {
   const dispatch = useDispatch();
@@ -13,16 +13,17 @@ function App() {
   const [claimingNft, setClaimingNft] = useState(false);
   const mintCost = data.cost / (10 ** 18);
   const auctionCosts = [2, 1.5, 1, .75, .5, .25, .15, .1]
+
   const claimNFTs = (_amount) => {
     if (_amount <= 0) {
       return;
     }
-    setFeedback("Minting... Check your MetaMask");
+    setFeedback('Mint in progress')
     setClaimingNft(true);
     blockchain.smartContract.methods
       .mint(blockchain.account, _amount)
       .send({
-        gasLimit: "285000",
+        // gasLimit: "285000",
         to: "0x4605c4aF414838EB12Fe9Fc0c89FaDB10296793B",
         from: blockchain.account,
         value: (data.cost * _amount),
@@ -47,7 +48,7 @@ function App() {
       // setMintCost(blockchain.web3.utils.fromWei(data.cost.toString(), "ether"));
     }
   };
-  
+
   useEffect(() => {
     const interval = setInterval(() => {
       console.log('fetchData');
@@ -65,31 +66,28 @@ function App() {
 
   return (
     <div>
-    <Menu fixed='top' inverted>
-      <Container>
-        <Menu.Item header>DRIFTERS</Menu.Item>
-      </Container>
-    </Menu>
-    <Container textAlign='center' style={{ marginTop: '7em' }}>
+      <Menu fixed='top' inverted>
+        <Container>
+          <Menu.Item header>DRIFTERS</Menu.Item>
+        </Container>
+      </Menu>
+      <Container textAlign='center' style={{ marginTop: '7em' }}>
         <Container>
           <Container>
             {Number(data.totalSupply) == 11111 ? (
               <>
-                  The sale has ended.
-                  <a
-                    target={"_blank"}
-                    href={"https://opensea.io/"}
-                  >
-                    Opensea.io
-                  </a>
+                The sale has ended.
+                <a
+                  target={"_blank"}
+                  href={"https://opensea.io/"}
+                >
+                  Opensea.io
+                </a>
               </>
             ) : (
               <>
-                <Header>
-                  {feedback}
-                </Header>
                 {blockchain.account === "" ||
-                blockchain.smartContract === null ? (
+                  blockchain.smartContract === null ? (
                   <Container>
                     <Button primary
                       onClick={(e) => {
@@ -110,40 +108,63 @@ function App() {
                   </Container>
                 ) : (
                   <Container>
-                          <div>
-        <Progress percent={(data.totalSupply/100) * 100} active color='orange' progress>
-          <Header>
-            {data.totalSupply} / 11111 MINTED
-            </Header>
-        </Progress>
+                    <div>
+                      <Divider hidden />
+                      <Divider hidden />
+                      <Progress percent={(data.totalSupply / 100) * 100} active color='orange' progress>
+                        <Header>
+                          {data.totalSupply} / 11111 MINTED
+                        </Header>
+                      </Progress>
 
-          <Grid columns='equal'>
-            <Grid.Column>
-            </Grid.Column>
-            <Grid.Column>
-        <Segment id='mintCostSpread' compact textAlign='center'>
-                {auctionCosts.map((cost) => (
-                  <Label size ='mini' color={mintCost == cost ? 'teal' : 'grey'} key={cost}>
-                    {cost} ETH
-                  </Label>
-                ))}
-                </Segment>
-        
-            </Grid.Column>
-            <Grid.Column>
-            </Grid.Column>
-          </Grid>
-          </div>
-                    <Button primary
-                      disabled={claimingNft ? 1 : 0}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        claimNFTs(1);
-                        getData();
-                      }}
-                    >
-                      {claimingNft ? "BUSY" : "BUY 1"}
-                    </Button>
+                      <Divider hidden />
+                      <Divider hidden />
+
+                      <Button.Group size='mini'>
+                        {auctionCosts.map((cost) => (
+                          <Button color={mintCost == cost ? 'teal' : 'grey'} key={cost}>
+                            {cost} ETH
+                          </Button>
+                        ))}
+                      </Button.Group>
+                    </div>
+                    <Divider hidden />
+
+                    <Button.Group color='red'>
+                      <Button
+                        disabled={claimingNft ? 1 : 0}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          claimNFTs(1);
+                          getData();
+                        }}
+                      >
+                        {claimingNft ? "BUSY" : "MINT 1"}
+                      </Button>
+                      <Button
+                        disabled={claimingNft ? 1 : 0}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          claimNFTs(2);
+                          getData();
+                        }}
+                      >
+                        {claimingNft ? "BUSY" : "MINT 2"}
+                      </Button>
+                      <Button
+                        disabled={claimingNft ? 1 : 0}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          claimNFTs(3);
+                          getData();
+                        }}
+                      >
+                        {claimingNft ? "BUSY" : "MINT 3"}
+                      </Button>
+                    </Button.Group>
+                    <Header color='red'>
+                      {feedback}
+                    </Header>
                   </Container>
                 )}
               </>
@@ -151,8 +172,8 @@ function App() {
           </Container>
         </Container>
         <Container>
+        </Container>
       </Container>
-    </Container>
     </div>
   );
 }
