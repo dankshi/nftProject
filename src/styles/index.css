@@ -1,15 +1,62 @@
 .ui {
     font-family: "Montserrat" !important;
-    color: white !important;
+    color: #E3E3E3 !important;
 }
 
 body{
-    background-image: url('../assets//website//cover.jpg');
+    /* background-image: url('../assets//images//village.jpg'); */
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-attachment: fixed;
+    background-color: #212528;
+}
+
+#smartContractContainer{
+    margin: 20vh;
 }
 
 #mintCostSpread{
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+#infoContainer{   
+    background-color: #1E1E1E;
+    padding: 80px;
+}
+
+#infoContainerInverted{
+    padding: 80px;
+}
+
+.tokenUtilityHeader{
+    letter-spacing: .1em;
+    font-size: 1.75em;
+    color:#F2711C !important;
+    font-weight:bold !important;
+    padding-bottom: 20px;
+    text-transform: uppercase !important;
+}
+
+.darkCard{
+    color:#E3E3E3;
+    background-color: #121212;
+    min-height: 250px;
+    border-radius: .3em;
+    padding:15px;
+}
+
+.darkCard:hover{
+    background-color: #2C2C2C;
+}
+
+.darkCard .title{
+    letter-spacing: .1em;
+    font-size: 1.25em;
+    padding: 20px;
+    font-weight:bold;
+}
+
+
+.darkCard .text{
+    padding:20px;
 }

@@ -69,7 +69,7 @@ export const connect = () => {
           });
           // Add listeners end
         } else {
-          dispatch(connectFailed("Change network to Polygon."));
+          dispatch(connectFailed("Change network to Ethereum."));
         }
       } catch (err) {
         dispatch(connectFailed("Something went wrong."));
