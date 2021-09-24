@@ -28,13 +28,22 @@ body{
     padding: 80px;
 }
 
-.tokenUtilityHeader{
+.customHeader{
     letter-spacing: .1em;
     font-size: 1.75em;
     color:#F2711C !important;
     font-weight:bold !important;
     padding-bottom: 20px;
     text-transform: uppercase !important;
+}
+
+.customSubheader{
+    color: #1C9DF2 !important;
+    text-transform: uppercase !important;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    font-size: 1.25em;
+    letter-spacing: .1em;
 }
 
 .darkCard{
@@ -59,4 +68,28 @@ body{
 
 .darkCard .text{
     padding:20px;
+}
+
+.customStatistic{
+    color: #1C9DF2 !important;
+    font-size: 1.25em;
+    font-weight:bold !important;
+    letter-spacing: .1em;
+    padding: 5px;;
+}
+
+.teamMemberName{
+    color: #1C9DF2 !important;
+    font-size: 1em;
+    font-weight:bold !important;
+    letter-spacing: .1em;
+    text-transform: uppercase !important;
+    margin-top: 5px;
+
+}
+.teamMemberTitle{
+    font-size: .6em;
+    letter-spacing: .1em;
+    margin-bottom: 5px;
+
 }

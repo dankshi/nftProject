@@ -6,7 +6,9 @@ import coverPhoto from "./assets/images/mainpage1.png";
 import drifter1 from "./assets/images/1.png";
 import drifter2 from "./assets/images/2.png";
 import drifter3 from "./assets/images/3.png";
-import { Button, Container, Header, Image, Menu, Progress, Segment, Label, Grid, Divider, Step, List, Card, Icon } from 'semantic-ui-react'
+import village from "./assets/images/village.jpg";
+import farm from "./assets/images/farm.jpeg";
+import { Button, Container, Header, Image, Menu, Progress, Segment, Label, Grid, Divider, Step, List, Card, Icon, Statistic } from 'semantic-ui-react'
 
 function App() {
   const dispatch = useDispatch();
@@ -109,6 +111,9 @@ function App() {
             <Menu.Item>
               <Icon link name='twitter' />
             </Menu.Item>
+            <Menu.Item>
+              <Icon link name='instagram' />
+            </Menu.Item>
             <Menu.Item >
               <Icon link name='discord' />
             </Menu.Item>
@@ -158,18 +163,18 @@ function App() {
                 ) : (
                   <Container fluid >
                     {!data.isPrivateSaleActive && !data.isPublicSaleActive ?
-                      (<div className='tokenUtilityHeader'>
+                      (<div className='customHeader'>
                         sale paused
                       </div>) : null}
 
                     <div id='saleState'>
                       {data.isPublicSaleActive ?
-                        (<div className='tokenUtilityHeader'>
+                        (<div className='customHeader'>
                           public sale
                         </div>) : null}
 
                       {data.isPrivateSaleActive ?
-                        (<div className='tokenUtilityHeader'>
+                        (<div className='customHeader'>
                           private sale
                         </div>) : null}
 
@@ -289,48 +294,51 @@ function App() {
           </div>
         )}
       </Container>
-      <Container id='infoContainer' fluid>
-        <Grid container stackable verticalAlign='middle'>
+
+      <Container id='infoContainer' fluid textAlign='center'>
+
+        <Grid stackable container>
           <Grid.Row>
-            <Grid.Column width={8}>
-              <Header className='tokenUtilityHeader'>
-                Drifters...
-              </Header>
-              <p>
+            <Grid.Column width={8} textAlign='left'>
+              <div className='customHeader'>
+                DRIFTERS
+              </div>
+              <div className='customSubheader'>
+                VISION
+              </div>
+              <div>
+                <Container>
+                  Blockchain technology has the power to change the fabric of our society.
+                  <br />
+                  <br />
+                  We have the power to create a world where information flows free,
+                  wealth distribution is fair,
+                  and society operates in the interest of the masses.
+                  <br />
+                  <br />
+                  Drifter's aim is to gather a community to build this future.
 
-                Are the ones who feel they don't belong.
-                <br />
-                <br />
-
-                Are the architects, healers, scientists, and builders of our future.
-                <br />
-                <br />
-
-                Are the dreamers who dream of a life in harmony with nature.
-                <br />
-                <br />
-                Reality is so far from what it could be.
-                <br />
-                <br />
-                We must gather the drifters of our world.
-                <br />
-                <br />
-
-                We will create a home and build the a better reality.
-              </p>
+                  <br />
+                  <br />
+                </Container>
+              </div>
             </Grid.Column>
-            <Grid.Column floated='right' width={6}>
-              <Image bordered rounded size='large' src={coverPhoto} />
+            <Grid.Column width={8}>
+              <Image bordered rounded size='medium' src={coverPhoto} centered />
             </Grid.Column>
           </Grid.Row>
         </Grid>
       </Container>
 
-      <Container id='infoContainerInverted' fluid >
-        <Header className='tokenUtilityHeader' textAlign='center' inverted>
+      <Container id='infoContainerInverted' fluid textAlign='center'>
+        <Header className='customHeader' textAlign='center' inverted>
           TOKEN UTILITY
         </Header>
+        The DRFT token is the entry point for all future projects.
         <Divider hidden />
+        <Container text>
+
+        </Container>
         <Grid stackable container columns='equal' textAlign='center'>
           <Grid.Row stretch>
             <Grid.Column>
@@ -371,59 +379,131 @@ function App() {
       </Container>
 
 
-      <Container id='infoContainer' fluid >
-        <Header className='tokenUtilityHeader' textAlign='center' inverted>
-          VISION
-        </Header>
-        <div>
+      <Container id='infoContainer' fluid>
 
-        </div>
+        <Grid stackable container>
+          <Grid.Row>
+            <Grid.Column width={8} textAlign='left'>
+              <div className='customSubheader'>
+                Drifter village
+              </div>
+              <div>
+                <Container>
+                  The ultimate objective is to create a gathering place for Drifters.
+
+                  <br />
+                  <br />
+                  We will pioneer the first physical crypto community. It will set an example of future living.
+
+                  <br />
+                  <br />
+                  The success of the DRFT Token is crucial to the attainment of this dream.
+
+                  <br />
+                  <br />
+                </Container>
+              </div>
+            </Grid.Column>
+            <Grid.Column width={8}>
+              <Image size='large' bordered rounded src={village} centered></Image>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
       </Container>
-
 
       <Container id='infoContainerInverted' fluid >
-        <Header className='tokenUtilityHeader' textAlign='center' inverted>
+        <Header className='customHeader' textAlign='center' inverted>
           road map
         </Header>
+        <Grid stackable container textAlign='center' width={8}>
+          <Grid.Row>
+            <Grid.Column width={8}>
+              <div className='customStatistic'>
+                Q4 2021
+              </div>
+              Staking system design and development.<br />
+              Drifter Village design and team recruitment. <br />
+              Community fund contributions begin.<br />
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column width={8}>
+              <div className='customStatistic'>
+                Q1 2022
+              </div>
+              Staking system launch.<br />
+              Companion NFT.<br />
+              Launch community project.<br />
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column width={8}>
+              <div className='customStatistic'>
+                Q2 2022
+              </div>
+              Drifter Village land scout.
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column width={8}>
+              <div className='customStatistic'>
+                Q3 2022
+              </div>
+              Drifter Village land procurement.
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column width={8}>
+              <div className='customStatistic'>
+                Q4 2022
+              </div>
+              Drifter Village construction starts.
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
         <div>
-
         </div>
       </Container>
 
       <Container id='infoContainer' fluid >
-        <Header className='tokenUtilityHeader' textAlign='center' inverted>
+        <Header className='customHeader' textAlign='center' inverted>
           team
         </Header>
+        <Divider hidden />
         <Container text>
           <Grid stackable container columns='equal'>
             <Grid.Column>
-              <Image src={drifter1} />
-              <Header as='h2' color='yellow'>
+              <Image bordered rounded size='medium' src={drifter1} />
+              <div className='teamMemberName'>
                 OrigamiHands
-                <Header.Subheader>
-                  Project Lead, Tech
-                </Header.Subheader>
-              </Header>
-              <Icon size='big' color='blue' link name='twitter' />
+              </div>
+              <div className='teamMemberTitle'>
+                  // Project Lead, Technology
+              </div>
+              <Icon size='medium' color='blue' link name='twitter' />
             </Grid.Column>
+
             <Grid.Column>
-              <Image src={drifter2} />
-              <Header as='h2' color='yellow'>
+              <Image bordered rounded size='medium' src={drifter2} />
+              <div className='teamMemberName'>
                 Dankshi
-                <Header.Subheader>
-                  Community Relations
-                </Header.Subheader>
-              </Header>
-              <Icon size='big' color='blue' link name='twitter' />
+              </div>
+              <div className='teamMemberTitle'>
+                  // Community Relations, Marketing
+              </div>
+              <Icon size='medium' color='blue' link name='twitter' />
             </Grid.Column>
           </Grid>
         </Container>
       </Container>
 
 
-      <Container id='infoContainerInverted' fluid >
+      <Container id='infoContainerInverted' fluid textAlign='center'>
         <Grid stackable container columns='equal'>
           <Grid.Column>
+          </Grid.Column>
+          <Grid.Column>     
+            Copyright <Icon name='copyright outline'/> 2021 Drifters
           </Grid.Column>
           <Grid.Column>
           </Grid.Column>
