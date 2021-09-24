@@ -37,9 +37,9 @@ export const fetchData = (account) => {
         .getState()
         .blockchain.smartContract.methods.cost()
         .call();
-      let paused = await store
+      let isPublicSaleActive = await store
         .getState()
-        .blockchain.smartContract.methods.paused()
+        .blockchain.smartContract.methods.privateSaleCost()
         .call();
       let maxSupply = await store
         .getState()
@@ -50,7 +50,7 @@ export const fetchData = (account) => {
           name,
           totalSupply,
           cost,
-          paused,
+          isPublicSaleActive,
           maxSupply,
         })
       );

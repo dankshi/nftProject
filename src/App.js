@@ -135,7 +135,7 @@ function App() {
 
                     <Divider hidden />
                     <Container>
-                      {!data.paused ?
+                      {data.isPublicSaleActive ?
                         (
                           <Progress percent={(data.totalSupply / data.maxSupply) * 100} active color='orange' progress>
                             <Header>
@@ -153,7 +153,7 @@ function App() {
                     </Container>
                     <Divider section hidden />
                     <Divider section hidden />
-                    {!data.paused ? (
+                    {data.isPublicSaleActive ? (
                     <Button.Group color='red' size='regular'>
                       <Button
                         disabled={claimingNft ? 1 : 0}
