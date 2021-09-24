@@ -8,48 +8,80 @@ pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract NerdyCoderClones is ERC721Enumerable, Ownable {
+contract Drifters is ERC721Enumerable, Ownable {
   using Strings for uint256;
 
   string public baseURI;
   string public baseExtension = ".json";
-  uint256 public cost = 100 ether;
-  uint256 public maxSupply = 1000;
-  uint256 public maxMintAmount = 20;
-  bool public paused = false;
+  uint256 public cost = 1 * 10 ** 18;
+  uint256 public maxSupply = 11111;
+  uint256 public maxMintAmount = 3;
+
+  // Private Sale
+  uint256 public privateSaleCost = .1 * 10 ** 18;
+  uint256 public maxPrivateMintAmount = 2;
+  bool public isPrivateSaleActive;
+  mapping(address => uint256) public privateSaleTracker;
   mapping(address => bool) public whitelisted;
+
+
+  bool public isPublicSaleActive;
 
   constructor(
     string memory _name,
     string memory _symbol,
     string memory _initBaseURI
   ) ERC721(_name, _symbol) {
+    isPrivateSaleActive = false;
+    isPublicSaleActive = false;
     setBaseURI(_initBaseURI);
-    mint(msg.sender, 20);
+    teamMint(111);
   }
 
-  // internal
   function _baseURI() internal view virtual override returns (string memory) {
     return baseURI;
   }
 
-  // public
-  function mint(address _to, uint256 _mintAmount) public payable {
+
+  function teamMint(uint256 _mintAmount) public payable onlyOwner {
     uint256 supply = totalSupply();
-    require(!paused);
+    for (uint256 i = 1; i <= _mintAmount; i++) {
+      _safeMint(msg.sender, supply + i);
+    }
+  }
+  
+  function publicMint(uint256 _mintAmount) public payable {
+    uint256 supply = totalSupply();
+    require(isPublicSaleActive);
     require(_mintAmount > 0);
     require(_mintAmount <= maxMintAmount);
     require(supply + _mintAmount <= maxSupply);
-
-    if (msg.sender != owner()) {
-        if(whitelisted[msg.sender] != true) {
-          require(msg.value >= cost * _mintAmount);
-        }
-    }
+    require(msg.value >= cost * _mintAmount);
 
     for (uint256 i = 1; i <= _mintAmount; i++) {
-      _safeMint(_to, supply + i);
+      _safeMint(msg.sender, supply + i);
     }
+  }
+
+  function togglePrivateSaleState() public onlyOwner{
+    isPrivateSaleActive = !isPrivateSaleActive;
+  }
+
+  function privateMint(uint256 _mintAmount) public payable {
+    uint256 supply = totalSupply();
+    require(isPrivateSaleActive);
+    require(_mintAmount > 0);
+    require(_mintAmount <= maxPrivateMintAmount);
+    require(privateSaleTracker[msg.sender] < maxPrivateMintAmount);
+    require(whitelisted[msg.sender] == true);
+    require(privateSaleTracker[msg.sender] + _mintAmount <= maxPrivateMintAmount);
+
+    
+    for (uint256 i = 1; i <= _mintAmount; i++) {
+      _safeMint(msg.sender, supply + i);
+      privateSaleTracker[msg.sender] = privateSaleTracker[msg.sender] + 1;
+    }
+    
   }
 
   function walletOfOwner(address _owner)
@@ -100,16 +132,20 @@ contract NerdyCoderClones is ERC721Enumerable, Ownable {
     baseExtension = _newBaseExtension;
   }
 
-  function pause(bool _state) public onlyOwner {
-    paused = _state;
+  function togglePublicSaleState() public onlyOwner {
+    isPublicSaleActive = !isPublicSaleActive;
   }
  
- function whitelistUser(address _user) public onlyOwner {
-    whitelisted[_user] = true;
+ function whitelistUsers(address[] memory _addresses) public onlyOwner {
+    for (uint256 i = 0; i < _addresses.length; i++) {
+        whitelisted[_addresses[i]] = true;
+    }
   }
  
-  function removeWhitelistUser(address _user) public onlyOwner {
-    whitelisted[_user] = false;
+  function removeWhitelistUsers(address[] memory _addresses) public onlyOwner {
+    for (uint256 i = 0; i < _addresses.length; i++) {
+        whitelisted[_addresses[i]] = false;
+    }
   }
 
   function withdraw() public payable onlyOwner {
