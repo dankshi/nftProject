@@ -39,11 +39,27 @@ export const fetchData = (account) => {
         .call();
       let isPublicSaleActive = await store
         .getState()
-        .blockchain.smartContract.methods.privateSaleCost()
+        .blockchain.smartContract.methods.isPublicSaleActive()
+        .call();
+      let isPrivateSaleActive = await store
+        .getState()
+        .blockchain.smartContract.methods.isPrivateSaleActive()
         .call();
       let maxSupply = await store
         .getState()
         .blockchain.smartContract.methods.maxSupply()
+        .call();
+      let maxMintAmount = await store
+        .getState()
+        .blockchain.smartContract.methods.maxMintAmount()
+        .call();
+      let maxPrivateMintAmount = await store
+        .getState()
+        .blockchain.smartContract.methods.maxPrivateMintAmount()
+        .call();
+      let privateSaleCost = await store
+        .getState()
+        .blockchain.smartContract.methods.privateSaleCost()
         .call();
       dispatch(
         fetchDataSuccess({
@@ -51,7 +67,11 @@ export const fetchData = (account) => {
           totalSupply,
           cost,
           isPublicSaleActive,
+          isPrivateSaleActive,
           maxSupply,
+          maxMintAmount,
+          maxPrivateMintAmount,
+          privateSaleCost
         })
       );
     } catch (err) {

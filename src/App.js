@@ -15,7 +15,12 @@ function App() {
   const [feedback, setFeedback] = useState("");
   const [claimingNft, setClaimingNft] = useState(false);
   const mintCost = data.cost / (10 ** 18);
-  const auctionCosts = [5, 3, 2, 1.5, 1, .75, .5, .25]
+  const auctionCosts = [3, 2, 1.5, 1, .75, .5, .25, .1]
+  const maxMintAmount = data.maxMintAmount;
+  const maxPrivateMintAmount = data.maxPrivateMintAmount;
+  const privateSaleCost = data.privateSaleCost;
+  // Figure out how to get mapped value
+  //const isWhitelisted = data.
 
   const claimNFTs = (_amount) => {
     if (_amount <= 0) {
@@ -24,12 +29,40 @@ function App() {
     setFeedback('Mint in progress')
     setClaimingNft(true);
     blockchain.smartContract.methods
-      .mint(blockchain.account, _amount)
+      .publicMint(_amount)
       .send({
         // gasLimit: "285000",
         to: "0x4605c4aF414838EB12Fe9Fc0c89FaDB10296793B",
         from: blockchain.account,
         value: (data.cost * _amount),
+      })
+      .once("error", (err) => {
+        console.log(err);
+        setFeedback("Sorry, something went wrong please try again later.");
+        setClaimingNft(false);
+      })
+      .then((receipt) => {
+        setFeedback(
+          "Mint Success"
+        );
+        setClaimingNft(false);
+        dispatch(fetchData(blockchain.account));
+      });
+  };
+
+  const privateMint = (_amount) => {
+    if (_amount <= 0) {
+      return;
+    }
+    setFeedback('Mint in progress')
+    setClaimingNft(true);
+    blockchain.smartContract.methods
+      .privateMint(_amount)
+      .send({
+        // gasLimit: "285000",
+        to: "0x4605c4aF414838EB12Fe9Fc0c89FaDB10296793B",
+        from: blockchain.account,
+        value: (privateSaleCost * _amount),
       })
       .once("error", (err) => {
         console.log(err);
@@ -124,20 +157,51 @@ function App() {
                   </Container>
                 ) : (
                   <Container fluid >
-                    <Divider hidden />
-                    <Button.Group size='mini'>
-                      {auctionCosts.map((cost) => (
-                        <Button color={mintCost == cost ? 'teal' : 'grey'} key={cost}>
-                          {cost} ETH
-                        </Button>
-                      ))}
-                    </Button.Group>
+                    {!data.isPrivateSaleActive && !data.isPublicSaleActive ?
+                      (<div className='tokenUtilityHeader'>
+                        sale paused
+                      </div>) : null}
+
+                    <div id='saleState'>
+                      {data.isPublicSaleActive ?
+                        (<div className='tokenUtilityHeader'>
+                          public sale
+                        </div>) : null}
+
+                      {data.isPrivateSaleActive ?
+                        (<div className='tokenUtilityHeader'>
+                          private sale
+                        </div>) : null}
+
+                    </div>
 
                     <Divider hidden />
-                    <Container>
-                      {data.isPublicSaleActive ?
+
+                    <div id='salePrices'>
+                      {data.isPrivateSaleActive ?
+                        (<Button.Group size='mini'>
+                          {auctionCosts.map((cost) => (
+                            <Button color={cost == .1 ? 'teal' : 'grey'} key={cost}>
+                              {cost} ETH
+                            </Button>
+                          ))}
+                        </Button.Group>) : null}
+                      {data.isPublicSaleActive || (!data.isPublicSaleActive && !data.isPrivateSaleActive) ?
+                        (<Button.Group size='mini'>
+                          {auctionCosts.map((cost) => (
+                            <Button color={mintCost == cost ? 'teal' : 'grey'} key={cost}>
+                              {cost} ETH
+                            </Button>
+                          ))}
+                        </Button.Group>) : null}
+                    </div>
+
+                    <Divider hidden />
+
+                    <div id='progressBar'>
+                      {data.isPublicSaleActive || data.isPrivateSaleActive ?
                         (
-                          <Progress percent={(data.totalSupply / data.maxSupply) * 100} active color='orange' progress>
+                          <Progress percent={((data.totalSupply / data.maxSupply) * 100).toFixed(2)} active color='orange' progress>
                             <Header>
                               {data.totalSupply} / {data.maxSupply} MINTED
                             </Header>
@@ -145,52 +209,79 @@ function App() {
                         ) :
                         (
                           <Progress percent={100} active color='red'>
-                            <Header>Sale Paused</Header>
                           </Progress>
                         )
                       }
+                    </div>
 
-                    </Container>
-                    <Divider section hidden />
-                    <Divider section hidden />
-                    {data.isPublicSaleActive ? (
-                    <Button.Group color='red' size='regular'>
-                      <Button
-                        disabled={claimingNft ? 1 : 0}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          claimNFTs(1);
-                          getData();
-                        }}
-                      >
-                        {claimingNft ? "BUSY" : "MINT 1"}
-                      </Button>
-                      <Button
-                        disabled={claimingNft ? 1 : 0}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          claimNFTs(2);
-                          getData();
-                        }}
-                      >
-                        {claimingNft ? "BUSY" : "MINT 2"}
-                      </Button>
-                      <Button
-                        disabled={claimingNft ? 1 : 0}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          claimNFTs(3);
-                          getData();
-                        }}
-                      >
-                        {claimingNft ? "BUSY" : "MINT 3"}
-                      </Button>
-                    </Button.Group>)
-                    :
-                    (<></>)}
-                    <Header color='red'>
-                      {feedback}
-                    </Header>
+                    <Divider hidden />
+                    <Divider hidden />
+                    <Divider hidden />
+                    <div id='mintButtons'>
+                      {data.isPublicSaleActive ? (
+                        <Button.Group color='red' size='regular'>
+                          <Button
+                            disabled={claimingNft ? 1 : 0}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              claimNFTs(1);
+                              getData();
+                            }}
+                          >
+                            {claimingNft ? "BUSY" : "MINT 1"}
+                          </Button>
+                          <Button
+                            disabled={claimingNft ? 1 : 0}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              claimNFTs(2);
+                              getData();
+                            }}
+                          >
+                            {claimingNft ? "BUSY" : "MINT 2"}
+                          </Button>
+                          <Button
+                            disabled={claimingNft ? 1 : 0}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              claimNFTs(3);
+                              getData();
+                            }}
+                          >
+                            {claimingNft ? "BUSY" : "MINT 3"}
+                          </Button>
+                        </Button.Group>)
+                        : null
+                      }
+                      {data.isPrivateSaleActive ? (
+                        <Button.Group color='red' size='regular'>
+                          <Button
+                            disabled={claimingNft ? 1 : 0}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              privateMint(1);
+                              getData();
+                            }}
+                          >
+                            {claimingNft ? "BUSY" : "MINT 1"}
+                          </Button>
+                          <Button
+                            disabled={claimingNft ? 1 : 0}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              privateMint(2);
+                              getData();
+                            }}
+                          >
+                            {claimingNft ? "BUSY" : "MINT 2"}
+                          </Button>
+                        </Button.Group>)
+                        : null
+                      }
+                      <Header color='red'>
+                        {feedback}
+                      </Header>
+                    </div>
                   </Container>
                 )}
               </Container>

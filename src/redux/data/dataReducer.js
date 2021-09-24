@@ -6,7 +6,11 @@ const initialState = {
   error: false,
   errorMsg: "",
   isPublicSaleActive: false,
+  isPrivateSaleActive: false,
+  maxMintAmount: 3,
+  maxPrivateMintAmount: 2,
   maxSupply: 0,
+  privateSaleCost: .1,
 };
 
 const dataReducer = (state = initialState, action) => {
@@ -26,9 +30,13 @@ const dataReducer = (state = initialState, action) => {
         totalSupply: action.payload.totalSupply,
         cost: action.payload.cost,
         isPublicSaleActive: action.payload.isPublicSaleActive,
+        isPrivateSaleActive: action.payload.isPrivateSaleActive,
         maxSupply: action.payload.maxSupply,
         error: false,
         errorMsg: "",
+        maxMintAmount: action.payload.maxMintAmount,
+        maxPrivateMintAmount: action.payload.maxPrivateMintAmount,
+        privateSaleCost: action.payload.privateSaleCost,
       };
     case "CHECK_DATA_FAILED":
       return {
