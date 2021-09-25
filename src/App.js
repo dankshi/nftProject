@@ -515,7 +515,9 @@ function App() {
               <div className='teamMemberTitle'>
                   // Project Lead, Technology
               </div>
-              <Icon size='medium' color='blue' link name='twitter' href='https://twitter.com/origamihands' target="_blank" />
+              <a href='https://twitter.com/origamihands' target="_blank" >
+                  <Icon size='medium' color='blue' link name='twitter' />
+                </a>
             </Grid.Column>
 
             <Grid.Column>
@@ -524,9 +526,11 @@ function App() {
                 Dankshi
               </div>
               <div className='teamMemberTitle'>
-                  // Community Relations, Marketing
+                  // Marketing, Drifter Village Lead
               </div>
-              <Icon size='medium' color='blue' link name='twitter' href='https://twitter.com/henrylzhou' target="_blank" />
+                <a href='https://twitter.com/henrylzhou' target="_blank" >
+                  <Icon size='medium' color='blue' link name='twitter' />
+                </a>
             </Grid.Column>
           </Grid>
         </Container>
