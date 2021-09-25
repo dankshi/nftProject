@@ -61,6 +61,13 @@ export const fetchData = (account) => {
         .getState()
         .blockchain.smartContract.methods.privateSaleCost()
         .call();
+        let isUserWhitelisted = false;
+        if(account != null){
+          isUserWhitelisted =  await store
+          .getState()
+          .blockchain.smartContract.methods.whitelisted(account)
+          .call();
+        }
       dispatch(
         fetchDataSuccess({
           name,
@@ -71,7 +78,8 @@ export const fetchData = (account) => {
           maxSupply,
           maxMintAmount,
           maxPrivateMintAmount,
-          privateSaleCost
+          privateSaleCost,
+          isUserWhitelisted
         })
       );
     } catch (err) {

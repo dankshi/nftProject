@@ -11,6 +11,7 @@ const initialState = {
   maxPrivateMintAmount: 2,
   maxSupply: 0,
   privateSaleCost: .1,
+  isUserWhitelisted: false,
 };
 
 const dataReducer = (state = initialState, action) => {
@@ -37,6 +38,7 @@ const dataReducer = (state = initialState, action) => {
         maxMintAmount: action.payload.maxMintAmount,
         maxPrivateMintAmount: action.payload.maxPrivateMintAmount,
         privateSaleCost: action.payload.privateSaleCost,
+        isUserWhitelisted: action.payload.isUserWhitelisted,
       };
     case "CHECK_DATA_FAILED":
       return {

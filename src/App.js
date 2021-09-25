@@ -52,6 +52,7 @@ function App() {
       });
   };
 
+
   const privateMint = (_amount) => {
     if (_amount <= 0) {
       return;
@@ -82,7 +83,7 @@ function App() {
 
   const getData = () => {
     if (blockchain.smartContract !== null) {
-      dispatch(fetchData());
+      dispatch(fetchData(blockchain.account));
       // setMintCost(blockchain.web3.utils.fromWei(data.cost.toString(), "ether"));
     }
   };
@@ -90,7 +91,7 @@ function App() {
   useEffect(() => {
     const interval = setInterval(() => {
       console.log('fetchData');
-      dispatch(fetchData());
+      dispatch(fetchData(blockchain.account));
     }
       , 1000);
     return () => {
@@ -108,13 +109,13 @@ function App() {
         <Container>
           <Menu.Item header>DRIFTERS</Menu.Item>
           <Menu.Menu position='right'>
-            <Menu.Item>
+            <Menu.Item href='https://twitter.com/drifters_nft' target="_blank">
               <Icon link name='twitter' />
             </Menu.Item>
-            <Menu.Item>
+            <Menu.Item href='https://www.instagram.com/drifters_nft/' target="_blank">
               <Icon link name='instagram' />
             </Menu.Item>
-            <Menu.Item >
+            <Menu.Item href='https://discord.gg/WzAdQqtZ' target="_blank" >
               <Icon link name='discord' />
             </Menu.Item>
           </Menu.Menu>
@@ -162,24 +163,39 @@ function App() {
                   </Container>
                 ) : (
                   <Container fluid >
-                    {!data.isPrivateSaleActive && !data.isPublicSaleActive ?
-                      (<div className='customHeader'>
-                        sale paused
-                      </div>) : null}
-
                     <div id='saleState'>
+                      {!data.isPrivateSaleActive && !data.isPublicSaleActive ?
+                        (<div>
+                          <div className='customHeader'>
+                            PUBLIC SALE
+                          </div>
+                          <div>
+                            <Label color='red'>PAUSED</Label>
+                          </div>
+                        </div>
+                        ) : null}
                       {data.isPublicSaleActive ?
-                        (<div className='customHeader'>
-                          public sale
-                        </div>) : null}
+                        (
+                          <div>
+                            <div className='customHeader'>
+                              PUBLIC SALE
+                            </div>
+                            <div>
+                              <Label color='GREEN'>LIVE</Label>
+                            </div>
+                          </div>
+                        ) : null}
 
                       {data.isPrivateSaleActive ?
-                        (<div className='customHeader'>
-                          private sale
+                        (<div>
+                          <div className='customHeader'>
+                            PRIVATE SALE
+                          </div>
+                          <div>
+                            <Label color='GREEN'>LIVE</Label>
+                          </div>
                         </div>) : null}
-
                     </div>
-
                     <Divider hidden />
 
                     <div id='salePrices'>
@@ -206,7 +222,7 @@ function App() {
                     <div id='progressBar'>
                       {data.isPublicSaleActive || data.isPrivateSaleActive ?
                         (
-                          <Progress percent={((data.totalSupply / data.maxSupply) * 100).toFixed(2)} active color='orange' progress>
+                          <Progress percent={((data.totalSupply / data.maxSupply).toFixed(2) * 100)} active color='orange' progress>
                             <Header>
                               {data.totalSupply} / {data.maxSupply} MINTED
                             </Header>
@@ -290,19 +306,21 @@ function App() {
                   </Container>
                 )}
               </Container>
+
+              <div id='whitelistStatus'>
+                {data.isUserWhitelisted ? (
+                  <Label color='green'>Whitelisted</Label>
+                ) : null}
+              </div>
             </div>
           </div>
         )}
       </Container>
 
       <Container id='infoContainer' fluid textAlign='center'>
-
         <Grid stackable container>
           <Grid.Row>
             <Grid.Column width={8} textAlign='left'>
-              <div className='customHeader'>
-                DRIFTERS
-              </div>
               <div className='customSubheader'>
                 VISION
               </div>
@@ -381,7 +399,7 @@ function App() {
 
       <Container id='infoContainer' fluid>
 
-        <Grid stackable container>
+        <Grid stackable container verticalAlign='middle' >
           <Grid.Row>
             <Grid.Column width={8} textAlign='left'>
               <div className='customSubheader'>
@@ -415,54 +433,71 @@ function App() {
         <Header className='customHeader' textAlign='center' inverted>
           road map
         </Header>
-        <Grid stackable container textAlign='center' width={8}>
+        <Grid stackable container verticalAlign='middle' centered>
           <Grid.Row>
-            <Grid.Column width={8}>
-              <div className='customStatistic'>
+            <Grid.Column width={6} >
+            </Grid.Column>
+            <Grid.Column width={6} textAlign='left'>
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column width={3}>
+              <div className='customStatistic' textAlign='right'>
                 Q4 2021
               </div>
-              Staking system design and development.<br />
-              Drifter Village design and team recruitment. <br />
-              Community fund contributions begin.<br />
+            </Grid.Column>
+            <Grid.Column width={6} textAlign='left'>
+              - Staking system design and development<br />
+              - Drifter Village design and team recruitment <br />
+              - Community fund contributions begin<br />
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
-            <Grid.Column width={8}>
-              <div className='customStatistic'>
+            <Grid.Column width={3}>
+              <div className='customStatistic' textAlign='right'>
                 Q1 2022
               </div>
-              Staking system launch.<br />
-              Companion NFT.<br />
-              Launch community project.<br />
+            </Grid.Column>
+            <Grid.Column width={6} textAlign='left'>
+              - Staking system launch<br />
+              - Companion NFT<br />
+              - Launch community project<br />
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
-            <Grid.Column width={8}>
-              <div className='customStatistic'>
+            <Grid.Column width={3}>
+              <div className='customStatistic' textAlign='right'>
                 Q2 2022
               </div>
-              Drifter Village land scout.
+            </Grid.Column>
+            <Grid.Column width={6} textAlign='left'>
+              - Drifter Village land scout<br />
+              - Metaverse character creation<br />
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
-            <Grid.Column width={8}>
-              <div className='customStatistic'>
+            <Grid.Column width={3}>
+              <div className='customStatistic' textAlign='right'>
                 Q3 2022
               </div>
-              Drifter Village land procurement.
+            </Grid.Column>
+            <Grid.Column width={6} textAlign='left'>
+              - Drifter Village land procurement<br />
+              - Distribution of metaverse character<br />
             </Grid.Column>
           </Grid.Row>
+
           <Grid.Row>
-            <Grid.Column width={8}>
-              <div className='customStatistic'>
-                Q4 2022
+            <Grid.Column width={3}>
+              <div className='customStatistic' textAlign='right'>
+                Q2 2022
               </div>
-              Drifter Village construction starts.
+            </Grid.Column>
+            <Grid.Column width={6} textAlign='left'>
+              - Drifter Village construction starts<br />
             </Grid.Column>
           </Grid.Row>
         </Grid>
-        <div>
-        </div>
       </Container>
 
       <Container id='infoContainer' fluid >
@@ -480,7 +515,7 @@ function App() {
               <div className='teamMemberTitle'>
                   // Project Lead, Technology
               </div>
-              <Icon size='medium' color='blue' link name='twitter' />
+              <Icon size='medium' color='blue' link name='twitter' href='https://twitter.com/origamihands' target="_blank" />
             </Grid.Column>
 
             <Grid.Column>
@@ -491,7 +526,7 @@ function App() {
               <div className='teamMemberTitle'>
                   // Community Relations, Marketing
               </div>
-              <Icon size='medium' color='blue' link name='twitter' />
+              <Icon size='medium' color='blue' link name='twitter' href='https://twitter.com/henrylzhou' target="_blank" />
             </Grid.Column>
           </Grid>
         </Container>
@@ -502,8 +537,8 @@ function App() {
         <Grid stackable container columns='equal'>
           <Grid.Column>
           </Grid.Column>
-          <Grid.Column>     
-            Copyright <Icon name='copyright outline'/> 2021 Drifters
+          <Grid.Column>
+            Copyright <Icon name='copyright outline' /> 2021 Drifters
           </Grid.Column>
           <Grid.Column>
           </Grid.Column>
