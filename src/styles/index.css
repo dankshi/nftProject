@@ -46,12 +46,21 @@ body{
     letter-spacing: .1em;
 }
 
+.customSubheaderSmall{
+    color: #1C9DF2 !important;
+    text-transform: uppercase !important;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1em;
+    letter-spacing: .1em;
+}
+
 .darkCard{
     color:#E3E3E3;
     background-color: #121212;
     min-height: 250px;
     border-radius: .3em;
-    padding:15px;
+    padding:5px;
 }
 
 .darkCard:hover{
@@ -60,11 +69,13 @@ body{
 
 .darkCard .title{
     letter-spacing: .1em;
-    font-size: 1.25em;
-    padding: 20px;
+    font-size: 1em;
+    padding-top: 15px;
     font-weight:bold;
-}
+    text-transform: uppercase !important;
+    color: #1C9DF2 !important;
 
+}
 
 .darkCard .text{
     padding:20px;
@@ -79,7 +90,7 @@ body{
 }
 
 .teamMemberName{
-    color: #1C9DF2 !important;
+    color: #F2711C !important;
     font-size: 1em;
     font-weight:bold !important;
     letter-spacing: .1em;
@@ -88,8 +99,21 @@ body{
 
 }
 .teamMemberTitle{
+    color: #1C9DF2 !important;
     font-size: .6em;
     letter-spacing: .1em;
     margin-bottom: 5px;
+}
+.teamMemberDescription{
+    font-size: .6em;
+    letter-spacing: .1em;
+    margin-bottom: 5px;
+}
 
+
+.feedback{
+    font-size: .75em;
+    letter-spacing: .1em;
+    color:#1C9DF2;
+    margin-bottom: 20px;
 }

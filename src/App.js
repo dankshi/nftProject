@@ -34,7 +34,7 @@ function App() {
       .publicMint(_amount)
       .send({
         // gasLimit: "285000",
-        to: "0x4605c4aF414838EB12Fe9Fc0c89FaDB10296793B",
+        to: "0xd7865289BD4B4B971AF778379D2F94C2faa94DE3",
         from: blockchain.account,
         value: (data.cost * _amount),
       })
@@ -141,7 +141,7 @@ function App() {
                 {blockchain.account === "" ||
                   blockchain.smartContract === null ? (
                   <Container>
-                    <Button animated color='orange'
+                    <Button animated color='orange' disabled
                       onClick={(e) => {
                         e.preventDefault();
                         dispatch(connect());
@@ -181,7 +181,7 @@ function App() {
                               PUBLIC SALE
                             </div>
                             <div>
-                              <Label color='GREEN'>LIVE</Label>
+                              <Label color='green'>LIVE</Label>
                             </div>
                           </div>
                         ) : null}
@@ -192,7 +192,7 @@ function App() {
                             PRIVATE SALE
                           </div>
                           <div>
-                            <Label color='GREEN'>LIVE</Label>
+                            <Label color='green'>LIVE</Label>
                           </div>
                         </div>) : null}
                     </div>
@@ -299,17 +299,15 @@ function App() {
                         </Button.Group>)
                         : null
                       }
-                      <Header color='red'>
-                        {feedback}
-                      </Header>
+                      {<div className='feedback'>{feedback}</div>}
                     </div>
                   </Container>
                 )}
               </Container>
 
               <div id='whitelistStatus'>
-                {data.isUserWhitelisted ? (
-                  <Label color='green'>Whitelisted</Label>
+                {data.isUserWhitelisted && !data.isPublicSaleActive ? (
+                  <Label color='teal'>Whitelisted</Label>
                 ) : null}
               </div>
             </div>
@@ -318,26 +316,32 @@ function App() {
       </Container>
 
       <Container id='infoContainer' fluid textAlign='center'>
-        <Grid stackable container>
+        <Header className='customHeader' textAlign='center' inverted>
+          purpose
+        </Header>
+        
+        <Grid stackable container verticalAlign='middle'>
           <Grid.Row>
             <Grid.Column width={8} textAlign='left'>
-              <div className='customSubheader'>
-                VISION
-              </div>
               <div>
                 <Container>
-                  Blockchain technology has the power to change the fabric of our society.
-                  <br />
-                  <br />
-                  We have the power to create a world where information flows free,
-                  wealth distribution is fair,
-                  and society operates in the interest of the masses.
-                  <br />
-                  <br />
-                  Drifter's aim is to gather a community to build this future.
-
-                  <br />
-                  <br />
+                  There is a high density of free thinkers in the cryptocurrency community. Many are not satisfied with the current state of affairs. We turned to cryptocurrency because of what it represents.
+                  <br /><br />
+                  <div className='customSubheaderSmall'>
+                    Freedom
+                  </div>Average people can invest in early-stage start-ups that could bring generational wealth.
+                  <br /><br />
+                  <div className='customSubheaderSmall'>
+                    fairness
+                  </div>ith blockchain technology, we can build a system that operates in the interest of the masses.
+                  <br /><br />
+                  <div className='customSubheaderSmall'>
+                    Change
+                  </div>
+                  We finally have the chance to change the system in a peaceful way, one built by the people.
+                  <br /><br />
+                  <b>The purpose of the Drifters Project is to gather the mavericks of our society and empower them to build an inspiring future.</b>
+                    <br/><br/>
                 </Container>
               </div>
             </Grid.Column>
@@ -350,9 +354,11 @@ function App() {
 
       <Container id='infoContainerInverted' fluid textAlign='center'>
         <Header className='customHeader' textAlign='center' inverted>
-          TOKEN UTILITY
+          DRFT TOKEN
         </Header>
-        The DRFT token is the entry point for all future projects.
+        <Container>
+          The DRFT token is engineered to incentivizes long-term holding.
+        </Container>
         <Divider hidden />
         <Container text>
 
@@ -403,20 +409,23 @@ function App() {
           <Grid.Row>
             <Grid.Column width={8} textAlign='left'>
               <div className='customSubheader'>
-                Drifter village
+                Driftopia
               </div>
               <div>
                 <Container>
-                  The ultimate objective is to create a gathering place for Drifters.
+                  Most of us live in places that don't inspire us.
+                  We live where do because it gets us to the job.
+                  This is the old world.
+
 
                   <br />
                   <br />
-                  We will pioneer the first physical crypto community. It will set an example of future living.
-
+                  In the new age, with the advent of remote work and digital income sources, many are now location independent.
                   <br />
                   <br />
-                  The success of the DRFT Token is crucial to the attainment of this dream.
-
+                  Driftopia is meant to be a community built in the spirit of what crypto represents. <br /> <br />
+                  A place centered around community, sustainability, and forward thinking. <br /> <br />
+                  A community of the future.
                   <br />
                   <br />
                 </Container>
@@ -448,7 +457,7 @@ function App() {
             </Grid.Column>
             <Grid.Column width={6} textAlign='left'>
               - Staking system design and development<br />
-              - Drifter Village design and team recruitment <br />
+              - Driftopia design and team recruitment <br />
               - Community fund contributions begin<br />
             </Grid.Column>
           </Grid.Row>
@@ -471,7 +480,7 @@ function App() {
               </div>
             </Grid.Column>
             <Grid.Column width={6} textAlign='left'>
-              - Drifter Village land scout<br />
+              - Driftopia land scout<br />
               - Metaverse character creation<br />
             </Grid.Column>
           </Grid.Row>
@@ -482,7 +491,7 @@ function App() {
               </div>
             </Grid.Column>
             <Grid.Column width={6} textAlign='left'>
-              - Drifter Village land procurement<br />
+              - Driftopia land procurement<br />
               - Distribution of metaverse character<br />
             </Grid.Column>
           </Grid.Row>
@@ -494,50 +503,101 @@ function App() {
               </div>
             </Grid.Column>
             <Grid.Column width={6} textAlign='left'>
-              - Drifter Village construction starts<br />
+              - Driftopia construction starts<br />
             </Grid.Column>
           </Grid.Row>
         </Grid>
       </Container>
 
       <Container id='infoContainer' fluid >
-        <Header className='customHeader' textAlign='center' inverted>
-          team
-        </Header>
-        <Divider hidden />
-        <Container text>
-          <Grid stackable container columns='equal'>
-            <Grid.Column>
-              <Image bordered rounded size='medium' src={drifter1} />
-              <div className='teamMemberName'>
-                OrigamiHands
-              </div>
-              <div className='teamMemberTitle'>
-                  // Project Lead, Technology
-              </div>
-              <a href='https://twitter.com/origamihands' target="_blank" >
+        <Container>
+          <Grid stackable columns='equal' centered>
+            <Header className='customHeader' textAlign='center'>
+              Values
+            </Header>
+            <Grid.Row>
+              <Grid.Column textAlign='center'>
+                <div class='darkCard'>
+                  <div class='title'>
+                    Freedom
+                  </div>
+                  <div class='text'>
+                    Driftopia and the community fund are all strategic moves to free people from their 9-5. We will create ways to financially support community members so that we can focus on building an inspiring future.
+                    </div>
+                </div>
+              </Grid.Column>
+              <Grid.Column textAlign='center'>
+                <div class='darkCard'>
+                  <div class='title'>
+                    Long-Term Thinking
+                  </div>
+                  <div class='text'>We try to innovate the space we enter instead of doing the bare minimum for short term gain.
+                  </div>
+                </div>
+              </Grid.Column>
+              <Grid.Column textAlign='center'>
+                <div class='darkCard'>
+                  <div class='title'>
+                    Value Creation
+                  </div>
+                  <div class='text'>
+                    All projects launched by Drifters are engineered to bring value and financial gain to the community. The success of the community is paramount, we need each other in positions of power in order to succeed.
+                  </div>
+                </div>
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
+        </Container>
+      </Container>
+
+      <Container id='infoContainerInverted' fluid >
+        <Container>
+          <Grid stackable columns='equal' centered>
+            <Header className='customHeader' textAlign='center'>
+              team
+            </Header>
+            <Grid.Row>
+              <Grid.Column width={5} >
+                <Image bordered rounded size='medium' src={drifter1} />
+                <div className='teamMemberName'>
+                  OrigamiHands
+                </div>
+                <div className='teamMemberTitle'>
+                  // Drifters Project Lead, Technology
+                </div>
+                <div className='teamMemberDescription'>
+
+                  A corporate software engineer turned blockchain engineer. He made successful investments in crypto that allow him time to work fulltime on Drifters.
+                </div>
+                <a href='https://twitter.com/origamihands' target="_blank" >
                   <Icon size='medium' color='blue' link name='twitter' />
                 </a>
-            </Grid.Column>
+              </Grid.Column>
+              <Grid.Column width={5}>
+                <Image bordered rounded size='medium' src={drifter2} />
+                <div className='teamMemberName'>
+                  Dankshi
+                </div>
+                <div className='teamMemberTitle'>
+                  // Driftopia Project Lead, Marketing
+                </div>
+                <div className='teamMemberDescription'>
 
-            <Grid.Column>
-              <Image bordered rounded size='medium' src={drifter2} />
-              <div className='teamMemberName'>
-                Dankshi
-              </div>
-              <div className='teamMemberTitle'>
-                  // Marketing, Drifter Village Lead
-              </div>
+                  Spent the last 3 years completing a gut renovation of a 1950s house from electrical to framing. Has the necessary skills to prototype the first Driftopia residence.
+                </div>
                 <a href='https://twitter.com/henrylzhou' target="_blank" >
                   <Icon size='medium' color='blue' link name='twitter' />
                 </a>
-            </Grid.Column>
+              </Grid.Column>
+            </Grid.Row>
+
+
           </Grid>
         </Container>
       </Container>
 
 
-      <Container id='infoContainerInverted' fluid textAlign='center'>
+      <Container id='infoContainer' fluid textAlign='center'>
         <Grid stackable container columns='equal'>
           <Grid.Column>
           </Grid.Column>
