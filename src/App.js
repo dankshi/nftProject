@@ -115,7 +115,7 @@ function App() {
             <Menu.Item href='https://www.instagram.com/drifters_nft/' target="_blank">
               <Icon link name='instagram' />
             </Menu.Item>
-            <Menu.Item href='https://discord.gg/WzAdQqtZ' target="_blank" >
+            <Menu.Item href='https://discord.gg/ZkGAgxry' target="_blank" >
               <Icon link name='discord' />
             </Menu.Item>
           </Menu.Menu>
