@@ -333,7 +333,7 @@ function App() {
                   <br /><br />
                   <div className='customSubheaderSmall'>
                     fairness
-                  </div>ith blockchain technology, we can build a system that operates in the interest of the masses.
+                  </div>With blockchain technology, we can build a system that operates in the interest of the masses.
                   <br /><br />
                   <div className='customSubheaderSmall'>
                     Change
