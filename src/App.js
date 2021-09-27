@@ -499,7 +499,7 @@ function App() {
           <Grid.Row>
             <Grid.Column width={3}>
               <div className='customStatistic' textAlign='right'>
-                Q2 2022
+                Q4 2022
               </div>
             </Grid.Column>
             <Grid.Column width={6} textAlign='left'>
