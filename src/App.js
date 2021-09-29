@@ -382,8 +382,8 @@ function App() {
                   ACCESS
                 </div>
                 <div class='text'>
-                  Future project are exclusive to DRFT holders. <br />
-                  Loyal holders will recieve the maximum benefit for every upcoming project.
+                  Future projects are exclusive to DRFT holders. <br />
+                  Loyal holders will receive the maximum benefit for every upcoming project.
                 </div>
               </div>
             </Grid.Column>
