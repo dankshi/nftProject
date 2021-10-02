@@ -563,7 +563,7 @@ function App() {
                   OrigamiHands
                 </div>
                 <div className='teamMemberTitle'>
-                  // Drifters Project Lead, Technology
+                  // Project Lead, Technology, Art Director
                 </div>
                 <div className='teamMemberDescription'>
 
