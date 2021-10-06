@@ -7,6 +7,7 @@ import drifter1 from "./assets/images/1.png";
 import drifter2 from "./assets/images/2.png";
 import drifter3 from "./assets/images/3.png";
 import drifter4 from "./assets/images/4_2.png";
+import drifter5 from "./assets/images/newneck.png";
 import village from "./assets/images/village.jpg";
 import farm from "./assets/images/farm.jpeg";
 import { Button, Container, Header, Image, Menu, Progress, Segment, Label, Grid, Divider, Step, List, Card, Icon, Statistic } from 'semantic-ui-react'
@@ -564,40 +565,23 @@ function App() {
             </Header>
             <Grid.Row>
               <Grid.Column width={5} >
-                <Image bordered rounded size='medium' src={drifter1} />
+                <Image bordered rounded size='medium' src={drifter4} />
                 <div className='teamMemberName'>
                   OrigamiHands
                 </div>
                 <div className='teamMemberTitle'>
-                  // Project Lead, Technology, Art Director
+                  // Project Lead, Technology
                 </div>
                 <div className='teamMemberDescription'>
-
-                  A corporate software engineer turned blockchain engineer. He made successful investments in crypto that allow him time to work fulltime on Drifters.
+                  He made successful investments in crypto. He is now investing all the proceeds into Drifters.
                 </div>
                 <a href='https://twitter.com/origamihands' target="_blank" >
                   <Icon size='medium' color='blue' link name='twitter' />
                 </a>
               </Grid.Column>
-              <Grid.Column width={5}>
-                <Image bordered rounded size='medium' src={drifter2} />
-                <div className='teamMemberName'>
-                  Dankshi
-                </div>
-                <div className='teamMemberTitle'>
-                  // Driftopia Project Lead, Marketing
-                </div>
-                <div className='teamMemberDescription'>
-
-                  Spent the last 3 years completing a gut renovation of a 1950s house from electrical to framing. Has the necessary skills to prototype the first Driftopia residence.
-                </div>
-                <a href='https://twitter.com/henrylzhou' target="_blank" >
-                  <Icon size='medium' color='blue' link name='twitter' />
-                </a>
-              </Grid.Column>
               
               <Grid.Column width={5}>
-                <Image bordered rounded size='medium' src={drifter4} />
+                <Image bordered rounded size='medium' src={drifter5} />
                 <div className='teamMemberName'>
                   thecyple
                 </div>
