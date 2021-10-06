@@ -6,6 +6,7 @@ import coverPhoto from "./assets/images/mainpage1.png";
 import drifter1 from "./assets/images/1.png";
 import drifter2 from "./assets/images/2.png";
 import drifter3 from "./assets/images/3.png";
+import drifter4 from "./assets/images/4_2.png";
 import village from "./assets/images/village.jpg";
 import farm from "./assets/images/farm.jpeg";
 import { Button, Container, Header, Image, Menu, Progress, Segment, Label, Grid, Divider, Step, List, Card, Icon, Statistic } from 'semantic-ui-react'
@@ -319,7 +320,7 @@ function App() {
         <Header className='customHeader' textAlign='center' inverted>
           purpose
         </Header>
-        
+
         <Grid stackable container verticalAlign='middle'>
           <Grid.Row>
             <Grid.Column width={8} textAlign='left'>
@@ -341,7 +342,12 @@ function App() {
                   We finally have the chance to change the system in a peaceful way, one built by the people.
                   <br /><br />
                   <b>The purpose of the Drifters Project is to gather the mavericks of our society and empower them to build an inspiring future.</b>
-                    <br/><br/>
+                  <br /><br />
+                  <Container textAlign='center'>
+                    <a href='https://docs.google.com/document/d/184NqMc2SwI4_vRAvWNT0AqSEOC3ySLMQV5jGx5rJsPk/edit?usp=sharing' target="_blank" >
+                      <Button color='orange'>Whitepaper</Button>
+                    </a>
+                  </Container>
                 </Container>
               </div>
             </Grid.Column>
@@ -523,7 +529,7 @@ function App() {
                   </div>
                   <div class='text'>
                     Driftopia and the community fund are all strategic moves to free people from their 9-5. We will create ways to financially support community members so that we can focus on building an inspiring future.
-                    </div>
+                  </div>
                 </div>
               </Grid.Column>
               <Grid.Column textAlign='center'>
@@ -586,6 +592,24 @@ function App() {
                   Spent the last 3 years completing a gut renovation of a 1950s house from electrical to framing. Has the necessary skills to prototype the first Driftopia residence.
                 </div>
                 <a href='https://twitter.com/henrylzhou' target="_blank" >
+                  <Icon size='medium' color='blue' link name='twitter' />
+                </a>
+              </Grid.Column>
+              
+              <Grid.Column width={5}>
+                <Image bordered rounded size='medium' src={drifter4} />
+                <div className='teamMemberName'>
+                  thecyple
+                </div>
+                <div className='teamMemberTitle'>
+                  // Project Advisor, Art & Brand Strategy
+                </div>
+                <div className='teamMemberDescription'>
+
+                Quit his career as a carpenter to go full time into NFTs. Founder of GNOGEN Studios and core advisor to Drifters.
+
+                </div>
+                <a href='https://twitter.com/thecyple' target="_blank" >
                   <Icon size='medium' color='blue' link name='twitter' />
                 </a>
               </Grid.Column>
