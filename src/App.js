@@ -7,7 +7,7 @@ import drifter1 from "./assets/images/1.png";
 import drifter2 from "./assets/images/2.png";
 import drifter3 from "./assets/images/3.png";
 import drifter4 from "./assets/images/4_2.png";
-import drifter5 from "./assets/images/newneck.png";
+import drifter5 from "./assets/images/blackedoutninja.png";
 import village from "./assets/images/village.jpg";
 import farm from "./assets/images/farm.jpeg";
 import { Button, Container, Header, Image, Menu, Progress, Segment, Label, Grid, Divider, Step, List, Card, Icon, Statistic } from 'semantic-ui-react'
