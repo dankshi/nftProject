@@ -322,9 +322,9 @@ function App() {
           purpose
         </Header>
 
-        <Grid stackable container verticalAlign='middle'>
+        <Grid stackable container verticalAlign='middle' centered>
           <Grid.Row>
-            <Grid.Column width={8} textAlign='left'>
+            <Grid.Column textAlign='middle' width={5}>
               <div>
                 <Container>
                   There is a high density of free thinkers in the cryptocurrency community. Many are not satisfied with the current state of affairs. We turned to cryptocurrency because of what it represents.
@@ -351,9 +351,6 @@ function App() {
                   </Container>
                 </Container>
               </div>
-            </Grid.Column>
-            <Grid.Column width={8}>
-              <Image bordered rounded size='medium' src={coverPhoto} centered />
             </Grid.Column>
           </Grid.Row>
         </Grid>
