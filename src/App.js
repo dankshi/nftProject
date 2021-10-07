@@ -570,7 +570,7 @@ function App() {
                   // Project Lead, Technology
                 </div>
                 <div className='teamMemberDescription'>
-                  He made successful investments in crypto. He is now investing all the proceeds into Drifters.
+                  He made successful investments in crypto and is now investing all the proceeds into Drifters.
                 </div>
                 <a href='https://twitter.com/origamihands' target="_blank" >
                   <Icon size='medium' color='blue' link name='twitter' />
