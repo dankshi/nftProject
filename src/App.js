@@ -567,7 +567,7 @@ function App() {
                   OrigamiHands
                 </div>
                 <div className='teamMemberTitle'>
-                  // Project Lead, Technology
+                  // Project Lead, Technology, Art Director
                 </div>
                 <div className='teamMemberDescription'>
                   He made successful investments in crypto and is now investing all the proceeds into Drifters.
