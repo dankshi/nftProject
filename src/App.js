@@ -327,6 +327,7 @@ function App() {
             <Grid.Column textAlign='middle' width={5}>
               <div>
                 <Container>
+                  <b>The purpose of the Drifters Project is to gather the mavericks of our society and empower them to build an inspiring future.</b><br /><br />
                   There is a high density of free thinkers in the cryptocurrency community. Many are not satisfied with the current state of affairs. We turned to cryptocurrency because of what it represents.
                   <br /><br />
                   <div className='customSubheaderSmall'>
@@ -341,8 +342,6 @@ function App() {
                     Change
                   </div>
                   We finally have the chance to change the system in a peaceful way, one built by the people.
-                  <br /><br />
-                  <b>The purpose of the Drifters Project is to gather the mavericks of our society and empower them to build an inspiring future.</b>
                   <br /><br />
                   <Container textAlign='center'>
                     <a href='https://docs.google.com/document/d/184NqMc2SwI4_vRAvWNT0AqSEOC3ySLMQV5jGx5rJsPk/edit?usp=sharing' target="_blank" >
@@ -417,19 +416,14 @@ function App() {
               </div>
               <div>
                 <Container>
-                  Most of us live in places that don't inspire us.
-                  We live where do because it gets us to the job.
-                  This is the old world.
-
-
+                  We will build a community of the future to house our holders.
                   <br />
                   <br />
-                  In the new age, with the advent of remote work and digital income sources, many are now location independent.
+                  With the advent of remote work and digital income sources, many are now location independent.
                   <br />
                   <br />
-                  Driftopia is meant to be a community built in the spirit of what crypto represents. <br /> <br />
-                  A place centered around community, sustainability, and forward thinking. <br /> <br />
-                  A community of the future.
+                   Driftopia will focus on sustainability and community living. <br /> <br />
+                   For more information, please check out our whitepaper. <br /> <br />
                   <br />
                   <br />
                 </Container>
