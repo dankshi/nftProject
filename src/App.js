@@ -327,22 +327,23 @@ function App() {
             <Grid.Column textAlign='middle' width={5}>
               <div>
                 <Container>
-                  <b>The purpose of the Drifters Project is to gather the mavericks of our society and empower them to build an inspiring future.</b><br /><br />
                   There is a high density of free thinkers in the cryptocurrency community. Many are not satisfied with the current state of affairs. We turned to cryptocurrency because of what it represents.
                   <br /><br />
                   <div className='customSubheaderSmall'>
                     Freedom
-                  </div>Average people can invest in early-stage start-ups that could bring generational wealth.
+                  </div>Average people have the opportunity to create generational wealth.
                   <br /><br />
                   <div className='customSubheaderSmall'>
                     fairness
-                  </div>With blockchain technology, we can build a system that operates in the interest of the masses.
+                  </div>We can create trustless systems that operate in the interest of the masses.
                   <br /><br />
                   <div className='customSubheaderSmall'>
                     Change
                   </div>
                   We finally have the chance to change the system in a peaceful way, one built by the people.
                   <br /><br />
+                  
+                  <b>Drifters will gather the mavericks of our society and empower them to change it.</b><br /><br />
                   <Container textAlign='center'>
                     <a href='https://docs.google.com/document/d/184NqMc2SwI4_vRAvWNT0AqSEOC3ySLMQV5jGx5rJsPk/edit?usp=sharing' target="_blank" >
                       <Button color='orange'>Whitepaper</Button>
