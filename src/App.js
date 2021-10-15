@@ -338,13 +338,14 @@ function App() {
       </Container> */}
       
       <Container>
+      <Divider/>
         <div className='customSubheader'>
           Road Map
         </div>
         <div className='customText'>
           The core object of Drifters NFT is to branch out into creating real world change.
         </div>
-        <div className="container">
+        <div className="timelineContainer">
             <div className="timeline">
                 <div className="timeline-container primary">
                     <div className="timeline-icon">
@@ -410,86 +411,17 @@ function App() {
         </div>
       </Container>
 
-
-
-      <Container id='infoContainerInverted' fluid >
-        <Header className='customHeader' textAlign='center' inverted>
-          road map
-        </Header>
-        <Grid stackable container verticalAlign='middle' centered>
-          <Grid.Row>
-            <Grid.Column width={6} >
-            </Grid.Column>
-            <Grid.Column width={6} textAlign='left'>
-            </Grid.Column>
-          </Grid.Row>
-          <Grid.Row>
-            <Grid.Column width={3}>
-              <div className='customStatistic' textAlign='right'>
-                Q4 2021
-              </div>
-            </Grid.Column>
-            <Grid.Column width={6} textAlign='left'>
-              - Staking system design and development<br />
-              - Driftopia design and team recruitment <br />
-              - Community fund contributions begin<br />
-            </Grid.Column>
-          </Grid.Row>
-          <Grid.Row>
-            <Grid.Column width={3}>
-              <div className='customStatistic' textAlign='right'>
-                Q1 2022
-              </div>
-            </Grid.Column>
-            <Grid.Column width={6} textAlign='left'>
-              - Staking system launch<br />
-              - Companion NFT<br />
-              - Launch community project<br />
-            </Grid.Column>
-          </Grid.Row>
-          <Grid.Row>
-            <Grid.Column width={3}>
-              <div className='customStatistic' textAlign='right'>
-                Q2 2022
-              </div>
-            </Grid.Column>
-            <Grid.Column width={6} textAlign='left'>
-              - Driftopia land scout<br />
-              - Metaverse character creation<br />
-            </Grid.Column>
-          </Grid.Row>
-          <Grid.Row>
-            <Grid.Column width={3}>
-              <div className='customStatistic' textAlign='right'>
-                Q3 2022
-              </div>
-            </Grid.Column>
-            <Grid.Column width={6} textAlign='left'>
-              - Driftopia land procurement<br />
-              - Distribution of metaverse character<br />
-            </Grid.Column>
-          </Grid.Row>
-
-          <Grid.Row>
-            <Grid.Column width={3}>
-              <div className='customStatistic' textAlign='right'>
-                Q4 2022
-              </div>
-            </Grid.Column>
-            <Grid.Column width={6} textAlign='left'>
-              - Driftopia construction starts<br />
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
+      <Container>
+        
+      <Divider/>
+        <div className='customSubheader'>
+          Team
+        </div>
       </Container>
 
-      
       <Container id='infoContainerInverted' fluid >
         <Container>
           <Grid stackable columns='equal' centered>
-            <Header className='customHeader' textAlign='center'>
-              team
-            </Header>
             <Grid.Row>
               <Grid.Column width={5} >
                 <Image bordered rounded size='medium' src={drifter4} />
