@@ -2,12 +2,8 @@ import React, { useEffect, useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { connect } from "./redux/blockchain/blockchainActions";
 import { fetchData } from "./redux/data/dataActions";
-import drifter1 from "./assets/images/1.png";
-import drifter2 from "./assets/images/2.png";
-import drifter3 from "./assets/images/3.png";
 import drifter4 from "./assets/images/4_2.png";
 import drifter5 from "./assets/images/blackedoutninja.png";
-import village from "./assets/images/village.jpg";
 import coverPhoto from "./assets/images/coverphoto.png";
 import { Button, Container, Header, Image, Menu, Progress, Segment, Label, Grid, Divider, Step, List, Card, Icon, Statistic } from 'semantic-ui-react'
 
@@ -319,101 +315,102 @@ function App() {
       <Image src={coverPhoto} fluid></Image>
       <Container>
       </Container>
-      <Container id='infoContainer'>
+      <Container id='customContainer'>
         <div id='welcomeToDriftopia'>
           Welcome to Driftopia
         </div>
         <div id='welcomeToDriftopiaText'>
-          The gathering place for an elite force of 11,111 warriors who will usher in the new world.
+          The gathering place for an elite force of 11,111 warriors who will usher in the new world.<br/><br/>
+          Hosted on the Ethereum Blockchain.
         </div>
         <div id='whitepaperButton'>
           <a href='https://docs.google.com/document/d/184NqMc2SwI4_vRAvWNT0AqSEOC3ySLMQV5jGx5rJsPk/edit?usp=sharing' target="_blank" >
-            <Button color='white' inverted>Whitepaper</Button>
+            <Button inverted>Whitepaper</Button>
           </a>
+          <a href='discord.gg/driftersnft' target="_blank" >
+            <Button inverted icon='discord' />
+          </a>          
+        </div>
+      </Container>
+
+      {/* <Container id='overlayContainer'>
+        testttt
+      </Container> */}
+      
+      <Container>
+        <div className='customSubheader'>
+          Road Map
+        </div>
+        <div className='customText'>
+          The core object of Drifters NFT is to branch out into creating real world change.
+        </div>
+        <div className="container">
+            <div className="timeline">
+                <div className="timeline-container primary">
+                    <div className="timeline-icon">
+                        <i className="far fa-grin-wink"></i>
+                    </div>
+                    <div className="timeline-body">
+                        <h4 className="timeline-title"><span className="badge">Primary</span></h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
+                        <p className="timeline-subtitle">1 Hours Ago</p>
+                    </div>
+                </div>
+                <div className="timeline-container danger">
+                    <div className="timeline-icon">
+                        <i className="far fa-grin-hearts"></i>
+                    </div>
+                    <div className="timeline-body">
+                        <h4 className="timeline-title"><span className="badge">Danger</span></h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
+                        <p className="timeline-subtitle">2 Hours Ago</p>
+                    </div>
+                </div>
+                <div className="timeline-container success">
+                    <div className="timeline-icon">
+                        <i className="far fa-grin-tears"></i>
+                    </div>
+                    <div className="timeline-body">
+                        <h4 className="timeline-title"><span className="badge">Success</span></h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
+                        <p className="timeline-subtitle">6 Hours Ago</p>
+                    </div>
+                </div>
+                <div className="timeline-container warning">
+                    <div className="timeline-icon">
+                        <i className="far fa-grimace"></i>
+                    </div>
+                    <div className="timeline-body">
+                        <h4 className="timeline-title"><span className="badge">Warning</span></h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
+                        <p className="timeline-subtitle">1 Day Ago</p>
+                    </div>
+                </div>
+                <div className="timeline-container">
+                    <div className="timeline-icon">
+                        <i className="far fa-grin-beam-sweat"></i>
+                    </div>
+                    <div className="timeline-body">
+                        <h4 className="timeline-title"><span className="badge">Secondary</span></h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
+                        <p className="timeline-subtitle">3 Days Ago</p>
+                    </div>
+                </div>
+                <div className="timeline-container info">
+                    <div className="timeline-icon">
+                        <i className="far fa-grin"></i>
+                    </div>
+                    <div className="timeline-body">
+                        <h4 className="timeline-title"><span className="badge">Info</span></h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
+                        <p className="timeline-subtitle">4 Days Ago</p>
+                    </div>
+                </div>
+            </div>
         </div>
       </Container>
 
 
-      <Container id='infoContainerInverted' fluid textAlign='center'>
-        <Header className='customHeader' textAlign='center' inverted>
-          DRFT TOKEN
-        </Header>
-        <Container>
-          The DRFT token is engineered to incentivizes long-term holding.
-        </Container>
-        <Divider hidden />
-        <Container text>
-
-        </Container>
-        <Grid stackable container columns='equal' textAlign='center'>
-          <Grid.Row stretch>
-            <Grid.Column>
-              <div class='darkCard'>
-                <div class='title'>
-                  STAKING
-                </div>
-                <div class='text'>
-                  Users stake DRFT tokens in exchange for a share of royalties. <br />
-                  Distribution will be based on DRFT tokens held and length of time staked.
-                </div>
-              </div>
-            </Grid.Column>
-            <Grid.Column>
-              <div class='darkCard'>
-                <div class='title'>
-                  ACCESS
-                </div>
-                <div class='text'>
-                  Future projects are exclusive to DRFT holders. <br />
-                  Loyal holders will receive the maximum benefit for every upcoming project.
-                </div>
-              </div>
-            </Grid.Column>
-            <Grid.Column>
-              <div class='darkCard'>
-                <div class='title'>
-                  GOVERNANCE
-                </div>
-                <div class='text'>
-                  The interest of the community comes first. <br />
-                  Token holders will participate in important decisions such as staking structure and community pool fund spending.
-                </div>
-              </div>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      </Container>
-
-
-      <Container id='infoContainer' fluid>
-
-        <Grid stackable container verticalAlign='middle' >
-          <Grid.Row>
-            <Grid.Column width={8} textAlign='left'>
-              <div className='customSubheader'>
-                Driftopia
-              </div>
-              <div>
-                <Container>
-                  We will build a community of the future to house our holders.
-                  <br />
-                  <br />
-                  With the advent of remote work and digital income sources, many are now location independent.
-                  <br />
-                  <br />
-                  Driftopia will focus on sustainability and community living. <br /> <br />
-                  For more information, please check out our whitepaper. <br /> <br />
-                  <br />
-                  <br />
-                </Container>
-              </div>
-            </Grid.Column>
-            <Grid.Column width={8}>
-              <Image size='large' bordered rounded src={village} centered></Image>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      </Container>
 
       <Container id='infoContainerInverted' fluid >
         <Header className='customHeader' textAlign='center' inverted>
@@ -486,47 +483,7 @@ function App() {
         </Grid>
       </Container>
 
-      <Container id='infoContainer' fluid >
-        <Container>
-          <Grid stackable columns='equal' centered>
-            <Header className='customHeader' textAlign='center'>
-              Values
-            </Header>
-            <Grid.Row>
-              <Grid.Column textAlign='center'>
-                <div class='darkCard'>
-                  <div class='title'>
-                    Freedom
-                  </div>
-                  <div class='text'>
-                    Driftopia and the community fund are all strategic moves to free people from their 9-5. We will create ways to financially support community members so that we can focus on building an inspiring future.
-                  </div>
-                </div>
-              </Grid.Column>
-              <Grid.Column textAlign='center'>
-                <div class='darkCard'>
-                  <div class='title'>
-                    Long-Term Thinking
-                  </div>
-                  <div class='text'>We try to innovate the space we enter instead of doing the bare minimum for short term gain.
-                  </div>
-                </div>
-              </Grid.Column>
-              <Grid.Column textAlign='center'>
-                <div class='darkCard'>
-                  <div class='title'>
-                    Value Creation
-                  </div>
-                  <div class='text'>
-                    All projects launched by Drifters are engineered to bring value and financial gain to the community. The success of the community is paramount, we need each other in positions of power in order to succeed.
-                  </div>
-                </div>
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
-        </Container>
-      </Container>
-
+      
       <Container id='infoContainerInverted' fluid >
         <Container>
           <Grid stackable columns='equal' centered>
