@@ -424,9 +424,11 @@ function App() {
               <div className='teamMember'>
                 <Image bordered rounded size='medium' src={drifter1} circular centered />
                 <div className='customTeamMemberName'>
-                  Henry Zhou
+                  Henry Zhou&nbsp;       
+                <a href='https://discord.com/channels/890772303623897139/890772304123002914/896169278938697739' target="_blank" >
+                <Label color='green' size='tiny'>DOXXED</Label>
+                  </a>
                 </div>
-                <Label color='green'>DOXXED</Label>
                 <div className='teamMemberTitle'>
                 // Project Lead, Art Director, Technology
                 </div>
@@ -552,25 +554,6 @@ function App() {
                   Finance professional living in Vancouver who also dabbles in crypto, electronic music, and NFTs.
                 </div>
                 <div className='customText'>
-                  <a href='https://twitter.com/wanacol' target="_blank" >
-                    <Icon color='blue' link name='twitter' />
-                  </a>
-                </div>
-              </div>
-            </Grid.Column>
-            <Grid.Column>
-              <div className='teamMember'>
-                <Image bordered rounded size='medium' src={logo} circular centered />
-                <div className='customTeamMemberName'>
-                  Cocobeans
-                </div>
-                <div className='teamMemberTitle'>
-                // Moderator
-                </div>
-                <div className='teamMemberText'>
-                  Aiming to build a strong, safe, and lively community for all of the drifters
-                </div>
-                <div className='customText'>
                   <a href='https://twitter.com/ilasannn' target="_blank" >
                     <Icon color='blue' link name='twitter' />
                   </a>
@@ -589,9 +572,36 @@ function App() {
                 <div className='teamMemberText'>
                 </div>
                 <div className='customText'>
-                  <a href='https://twitter.com/steveisdajackal' target="_blank" >
-                    <Icon color='blue' link name='twitter' />
-                  </a>
+                </div>
+              </div>
+            </Grid.Column>
+            <Grid.Column>
+              <div className='teamMember'>
+                <Image bordered rounded size='medium' src={logo} circular centered />
+                <div className='customTeamMemberName'>
+                  Siun
+                </div>
+                <div className='teamMemberTitle'>
+                // Moderator
+                </div>
+                <div className='teamMemberText'>
+                </div>
+                <div className='customText'>
+                </div>
+              </div>
+            </Grid.Column>
+            <Grid.Column>
+              <div className='teamMember'>
+                <Image bordered rounded size='medium' src={logo} circular centered />
+                <div className='customTeamMemberName'>
+                  Graydster
+                </div>
+                <div className='teamMemberTitle'>
+                // Moderator
+                </div>
+                <div className='teamMemberText'>
+                </div>
+                <div className='customText'>
                 </div>
               </div>
             </Grid.Column>
