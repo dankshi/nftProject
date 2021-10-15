@@ -338,7 +338,9 @@ function App() {
       </Container> */}
 
       <Container>
-        <Divider />
+        <div className='dividerSpacing'>
+          <Divider />
+        </div>
         <div className='customSubheader'>
           Road Map
         </div>
@@ -352,9 +354,13 @@ function App() {
                 <i className="far fa-grin-wink"></i>
               </div>
               <div className="timeline-body">
-                <h4 className="timeline-title"><span className="badge">Primary</span></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                <p className="timeline-subtitle">1 Hours Ago</p>
+                <h4 className="timeline-title"><span className="badge">Q4 2021</span></h4>
+                <p>
+                ‣ Sale of 11,111 Drifters <br/>
+                ‣ Design SEC-compliant staking system and currency <br/>
+                ‣ Community fund contributions begin <br/>
+                </p>
+                <p className="timeline-subtitle"></p>
               </div>
             </div>
             <div className="timeline-container danger">
@@ -362,9 +368,12 @@ function App() {
                 <i className="far fa-grin-hearts"></i>
               </div>
               <div className="timeline-body">
-                <h4 className="timeline-title"><span className="badge">Danger</span></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                <p className="timeline-subtitle">2 Hours Ago</p>
+                <h4 className="timeline-title"><span className="badge">Q1 2022</span></h4>
+                <p>
+                ‣ Implement & launch staking system <br/>
+                ‣ Begin recruitment for Driftopia <br/>
+                </p>
+                <p className="timeline-subtitle"></p>
               </div>
             </div>
             <div className="timeline-container success">
@@ -372,9 +381,12 @@ function App() {
                 <i className="far fa-grin-tears"></i>
               </div>
               <div className="timeline-body">
-                <h4 className="timeline-title"><span className="badge">Success</span></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                <p className="timeline-subtitle">6 Hours Ago</p>
+                <h4 className="timeline-title"><span className="badge">Q2 2022</span></h4>
+                <p>
+                ‣ Release companion NFT <br/>
+                ‣ Begin land scouting for Driftopia <br/>
+                </p>
+                <p className="timeline-subtitle"></p>
               </div>
             </div>
             <div className="timeline-container warning">
@@ -382,29 +394,12 @@ function App() {
                 <i className="far fa-grimace"></i>
               </div>
               <div className="timeline-body">
-                <h4 className="timeline-title"><span className="badge">Warning</span></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                <p className="timeline-subtitle">1 Day Ago</p>
-              </div>
-            </div>
-            <div className="timeline-container">
-              <div className="timeline-icon">
-                <i className="far fa-grin-beam-sweat"></i>
-              </div>
-              <div className="timeline-body">
-                <h4 className="timeline-title"><span className="badge">Secondary</span></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                <p className="timeline-subtitle">3 Days Ago</p>
-              </div>
-            </div>
-            <div className="timeline-container info">
-              <div className="timeline-icon">
-                <i className="far fa-grin"></i>
-              </div>
-              <div className="timeline-body">
-                <h4 className="timeline-title"><span className="badge">Info</span></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                <p className="timeline-subtitle">4 Days Ago</p>
+                <h4 className="timeline-title"><span className="badge">Q3 2022</span></h4>
+                <p>
+                ‣ Launch SEC complaint Driftopian currency <br/>
+                ‣ Seed round funding for starter Driftopia community <br/>
+                </p>
+                <p className="timeline-subtitle"></p>
               </div>
             </div>
           </div>
@@ -413,16 +408,18 @@ function App() {
 
       <Container>
 
-        <Divider />
+        <div className='dividerSpacing'>
+          <Divider />
+        </div>
         <div className='customSubheader'>
           Team
         </div>
         <div className='teamMember'>
-          <Image bordered rounded size='medium' src={drifter4} circular/>
+          <Image bordered rounded size='medium' src={drifter4} circular />
           <div className='customText'>
             OrigamiHands
-            
-        <Label as='a' color='green'>DOXXED</Label>
+
+            <Label as='a' color='green'>DOXXED</Label>
           </div>
           <div className='customText'>
                   // Project Lead, Technology, Art Director
@@ -436,20 +433,20 @@ function App() {
         </div>
 
         <div className='teamMember'>
-          <Image bordered rounded size='medium' src={drifter5} circular/>
+          <Image bordered rounded size='medium' src={drifter5} circular />
           <div className='teamMemberName'>
-          thecyple
+            thecyple
           </div>
           <div className='teamMemberTitle'>
           // Project Advisor, Art & Brand Strategy
           </div>
           <div className='teamMemberDescription'>
 
-          Quit his career as a carpenter to go full time into NFTs.Founder of GNOGEN Studios and core advisor to Drifters.
+            Quit his career as a carpenter to go full time into NFTs.Founder of GNOGEN Studios and core advisor to Drifters.
 
           </div>
           <a href='https://twitter.com/thecyple' target="_blank" >
-          <Icon size='medium' color='blue' link name='twitter' />
+            <Icon size='medium' color='blue' link name='twitter' />
           </a>
         </div>
       </Container>

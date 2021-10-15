@@ -44,7 +44,7 @@ body{
 }
 
 #customContainer{
-    padding: 80px 0px;
+    padding: 80px 0 0 0;
 }
 
 #overlayContainer{
@@ -156,4 +156,8 @@ body{
     width:250px;
     float:left;
 
+}
+
+.dividerSpacing{
+    padding: 50px 0;
 }
