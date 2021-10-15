@@ -1,5 +1,9 @@
 .ui {
-    font-family: "Montserrat" !important;
+    font-family: 'good-times', sans-serif !important;
+    font-weight: 200;
+    font-style: normal;
+
+    /* font-family: "Montserrat" !important; */
     color: #E3E3E3 !important;
 }
 
@@ -8,7 +12,27 @@ body{
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-attachment: fixed;
-    background-color: #212528;
+    background-color: #121212;
+}
+
+#welcomeToDriftopia{
+    font-family: 'good-times', sans-serif !important;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 3em;
+    padding: 20px 0px;
+}
+
+#welcomeToDriftopiaText{
+    font-family: 'neue-haas-grotesk-display',sans-serif !important;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1.25em;
+    padding: 20px 0px;
+}
+
+#whitepaperButton{
+    padding: 20px 0px;
 }
 
 #smartContractContainer{
@@ -19,8 +43,7 @@ body{
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-#infoContainer{   
-    background-color: #1E1E1E;
+#infoContainer{
     padding: 80px;
 }
 
@@ -29,21 +52,16 @@ body{
 }
 
 .customHeader{
-    letter-spacing: .1em;
-    font-size: 1.75em;
+    font-weight: 100 !important;
     color:#F2711C !important;
-    font-weight:bold !important;
     padding-bottom: 20px;
     text-transform: uppercase !important;
 }
 
 .customSubheader{
     color: #1C9DF2 !important;
-    text-transform: uppercase !important;
     margin-top: 30px;
     padding-bottom: 20px;
-    font-size: 1.25em;
-    letter-spacing: .1em;
 }
 
 .customSubheaderSmall{
@@ -71,7 +89,6 @@ body{
     letter-spacing: .1em;
     font-size: 1em;
     padding-top: 15px;
-    font-weight:bold;
     text-transform: uppercase !important;
     color: #1C9DF2 !important;
 
@@ -84,7 +101,6 @@ body{
 .customStatistic{
     color: #1C9DF2 !important;
     font-size: 1.25em;
-    font-weight:bold !important;
     letter-spacing: .1em;
     padding: 5px;;
 }
@@ -92,7 +108,6 @@ body{
 .teamMemberName{
     color: #F2711C !important;
     font-size: 1em;
-    font-weight:bold !important;
     letter-spacing: .1em;
     text-transform: uppercase !important;
     margin-top: 5px;
@@ -112,7 +127,6 @@ body{
 
 
 .feedback{
-    font-size: .75em;
     letter-spacing: .1em;
     color:#1C9DF2;
     margin-bottom: 20px;

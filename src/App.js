@@ -2,14 +2,13 @@ import React, { useEffect, useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { connect } from "./redux/blockchain/blockchainActions";
 import { fetchData } from "./redux/data/dataActions";
-import coverPhoto from "./assets/images/mainpage1.png";
 import drifter1 from "./assets/images/1.png";
 import drifter2 from "./assets/images/2.png";
 import drifter3 from "./assets/images/3.png";
 import drifter4 from "./assets/images/4_2.png";
 import drifter5 from "./assets/images/blackedoutninja.png";
 import village from "./assets/images/village.jpg";
-import farm from "./assets/images/farm.jpeg";
+import coverPhoto from "./assets/images/coverphoto.png";
 import { Button, Container, Header, Image, Menu, Progress, Segment, Label, Grid, Divider, Step, List, Card, Icon, Statistic } from 'semantic-ui-react'
 
 function App() {
@@ -123,7 +122,7 @@ function App() {
           </Menu.Menu>
         </Container>
       </Menu>
-      <Container textAlign='center' style={{ marginTop: '7em' }}>
+      {/* <Container textAlign='center' style={{ marginTop: '7em' }}>
         <Header inverted>
         </Header>
         {(Number(data.totalSupply) == 11111) ? (
@@ -315,46 +314,25 @@ function App() {
             </div>
           </div>
         )}
+      </Container> */}
+
+      <Image src={coverPhoto} fluid></Image>
+      <Container>
+      </Container>
+      <Container id='infoContainer'>
+        <div id='welcomeToDriftopia'>
+          Welcome to Driftopia
+        </div>
+        <div id='welcomeToDriftopiaText'>
+          The gathering place for an elite force of 11,111 warriors who will usher in the new world.
+        </div>
+        <div id='whitepaperButton'>
+          <a href='https://docs.google.com/document/d/184NqMc2SwI4_vRAvWNT0AqSEOC3ySLMQV5jGx5rJsPk/edit?usp=sharing' target="_blank" >
+            <Button color='white' inverted>Whitepaper</Button>
+          </a>
+        </div>
       </Container>
 
-      <Container id='infoContainer' fluid textAlign='center'>
-        <Header className='customHeader' textAlign='center' inverted>
-          purpose
-        </Header>
-
-        <Grid stackable container verticalAlign='middle' centered>
-          <Grid.Row>
-            <Grid.Column textAlign='middle' width={5}>
-              <div>
-                <Container>
-                  There is a high density of free thinkers in the cryptocurrency community. Many are not satisfied with the current state of affairs. We turned to cryptocurrency because of what it represents.
-                  <br /><br />
-                  <div className='customSubheaderSmall'>
-                    Freedom
-                  </div>Average people have the opportunity to create generational wealth.
-                  <br /><br />
-                  <div className='customSubheaderSmall'>
-                    fairness
-                  </div>We can create trustless systems that operate in the interest of the masses.
-                  <br /><br />
-                  <div className='customSubheaderSmall'>
-                    Change
-                  </div>
-                  We finally have the chance to change the system in a peaceful way, one built by the people.
-                  <br /><br />
-                  
-                  <b>Drifters will gather the mavericks of our society and empower them to change it.</b><br /><br />
-                  <Container textAlign='center'>
-                    <a href='https://docs.google.com/document/d/184NqMc2SwI4_vRAvWNT0AqSEOC3ySLMQV5jGx5rJsPk/edit?usp=sharing' target="_blank" >
-                      <Button color='orange'>Whitepaper</Button>
-                    </a>
-                  </Container>
-                </Container>
-              </div>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      </Container>
 
       <Container id='infoContainerInverted' fluid textAlign='center'>
         <Header className='customHeader' textAlign='center' inverted>
@@ -423,8 +401,8 @@ function App() {
                   With the advent of remote work and digital income sources, many are now location independent.
                   <br />
                   <br />
-                   Driftopia will focus on sustainability and community living. <br /> <br />
-                   For more information, please check out our whitepaper. <br /> <br />
+                  Driftopia will focus on sustainability and community living. <br /> <br />
+                  For more information, please check out our whitepaper. <br /> <br />
                   <br />
                   <br />
                 </Container>
@@ -571,7 +549,7 @@ function App() {
                   <Icon size='medium' color='blue' link name='twitter' />
                 </a>
               </Grid.Column>
-              
+
               <Grid.Column width={5}>
                 <Image bordered rounded size='medium' src={drifter5} />
                 <div className='teamMemberName'>
@@ -582,7 +560,7 @@ function App() {
                 </div>
                 <div className='teamMemberDescription'>
 
-                Quit his career as a carpenter to go full time into NFTs. Founder of GNOGEN Studios and core advisor to Drifters.
+                  Quit his career as a carpenter to go full time into NFTs. Founder of GNOGEN Studios and core advisor to Drifters.
 
                 </div>
                 <a href='https://twitter.com/thecyple' target="_blank" >
