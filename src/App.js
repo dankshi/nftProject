@@ -422,7 +422,7 @@ function App() {
           <Grid.Row>
             <Grid.Column centered>
               <div className='teamMember'>
-                <Image bordered rounded size='medium' src={drifter1} circular centered/>
+                <Image bordered rounded size='medium' src={drifter1} circular centered />
                 <div className='customTeamMemberName'>
                   Henry Zhou
                 </div>
@@ -439,10 +439,10 @@ function App() {
                   </a>
                 </div>
               </div>
-              </Grid.Column>
+            </Grid.Column>
             <Grid.Column>
               <div className='teamMember'>
-                <Image bordered rounded size='medium' src={drifter2} circular centered/>
+                <Image bordered rounded size='medium' src={drifter2} circular centered />
                 <div className='customTeamMemberName'>
                   Thecyple
                 </div>
@@ -450,7 +450,7 @@ function App() {
                 // Project Advisor, Art & Brand Strategy
                 </div>
                 <div className='teamMemberText'>
-                Quit his career as a carpenter to go full time into NFTs. Founder of GNOGEN Studios and core advisor to Drifters
+                  Quit his career as a carpenter to go full time into NFTs. Founder of GNOGEN Studios and core advisor to Drifters
                 </div>
                 <div className='customText'>
                   <a href='https://twitter.com/thecyple' target="_blank" >
@@ -458,10 +458,10 @@ function App() {
                   </a>
                 </div>
               </div>
-              </Grid.Column>
+            </Grid.Column>
             <Grid.Column>
               <div className='teamMember'>
-                <Image bordered rounded size='medium' src={drifter4} circular centered/>
+                <Image bordered rounded size='medium' src={drifter4} circular centered />
                 <div className='customTeamMemberName'>
                   Dajackal
                 </div>
@@ -477,21 +477,18 @@ function App() {
                   </a>
                 </div>
               </div>
-              </Grid.Column>
-          </Grid.Row>
-
-          <Grid.Row>
+            </Grid.Column>
             <Grid.Column centered>
               <div className='teamMember'>
-                <Image bordered rounded size='medium' src={logo} circular centered/>
+                <Image bordered rounded size='medium' src={logo} circular centered />
                 <div className='customTeamMemberName'>
-                Wanacool
+                  Wanacool
                 </div>
                 <div className='teamMemberTitle'>
                 // Moderator
                 </div>
                 <div className='teamMemberText'>
-                NFT enthusiast, hardcore gamer, and anime fan. Marketing Direct at CNFT called @AktiumCNFT. 
+                  NFT enthusiast, hardcore gamer, and anime fan. Marketing Direct at CNFT called @AktiumCNFT.
                 </div>
                 <div className='customText'>
                   <a href='https://twitter.com/wanacol' target="_blank" >
@@ -499,10 +496,10 @@ function App() {
                   </a>
                 </div>
               </div>
-              </Grid.Column>
+            </Grid.Column>
             <Grid.Column>
               <div className='teamMember'>
-                <Image bordered rounded size='medium' src={logo} circular centered/>
+                <Image bordered rounded size='medium' src={logo} circular centered />
                 <div className='customTeamMemberName'>
                   Cocobeans
                 </div>
@@ -510,7 +507,7 @@ function App() {
                 // Moderator
                 </div>
                 <div className='teamMemberText'>
-                Aiming to build a strong, safe, and lively community for all of the drifters
+                  Aiming to build a strong, safe, and lively community for all of the drifters
                 </div>
                 <div className='customText'>
                   <a href='https://twitter.com/_CoCoBeans_' target="_blank" >
@@ -518,10 +515,10 @@ function App() {
                   </a>
                 </div>
               </div>
-              </Grid.Column>
+            </Grid.Column>
             <Grid.Column>
               <div className='teamMember'>
-                <Image bordered rounded size='medium' src={logo} circular centered/>
+                <Image bordered rounded size='medium' src={logo} circular centered />
                 <div className='customTeamMemberName'>
                   Dravyn
                 </div>
@@ -529,7 +526,7 @@ function App() {
                 // Moderator
                 </div>
                 <div className='teamMemberText'>
-                Producer, artist, and crypto/nft investor looking to build with the new generation of creatives.
+                  Producer, artist, and crypto/nft investor looking to build with the new generation of creatives.
                 </div>
                 <div className='customText'>
                   <a href='https://twitter.com/dravynmusic' target="_blank" >
@@ -537,22 +534,22 @@ function App() {
                   </a>
                 </div>
               </div>
-              </Grid.Column>
+            </Grid.Column>
           </Grid.Row>
-          
+
 
           <Grid.Row>
             <Grid.Column centered>
               <div className='teamMember'>
-                <Image bordered rounded size='medium' src={logo} circular centered/>
+                <Image bordered rounded size='medium' src={logo} circular centered />
                 <div className='customTeamMemberName'>
-                Austin C
+                  Austin C
                 </div>
                 <div className='teamMemberTitle'>
                 // Moderator
                 </div>
                 <div className='teamMemberText'>
-  Bio: Finance professional living in Vancouver who also dabbles in crypto, electronic music, and NFTs. 
+                  Finance professional living in Vancouver who also dabbles in crypto, electronic music, and NFTs.
                 </div>
                 <div className='customText'>
                   <a href='https://twitter.com/wanacol' target="_blank" >
@@ -560,10 +557,10 @@ function App() {
                   </a>
                 </div>
               </div>
-              </Grid.Column>
+            </Grid.Column>
             <Grid.Column>
               <div className='teamMember'>
-                <Image bordered rounded size='medium' src={logo} circular centered/>
+                <Image bordered rounded size='medium' src={logo} circular centered />
                 <div className='customTeamMemberName'>
                   Cocobeans
                 </div>
@@ -571,7 +568,7 @@ function App() {
                 // Moderator
                 </div>
                 <div className='teamMemberText'>
-                Aiming to build a strong, safe, and lively community for all of the drifters
+                  Aiming to build a strong, safe, and lively community for all of the drifters
                 </div>
                 <div className='customText'>
                   <a href='https://twitter.com/ilasannn' target="_blank" >
@@ -579,17 +576,17 @@ function App() {
                   </a>
                 </div>
               </div>
-              </Grid.Column>
+            </Grid.Column>
             <Grid.Column>
               <div className='teamMember'>
-                <Image bordered rounded size='medium' src={logo} circular centered/>
+                <Image bordered rounded size='medium' src={logo} circular centered />
                 <div className='customTeamMemberName'>
                   Justin
                 </div>
                 <div className='teamMemberTitle'>
                 // Moderator
                 </div>
-                <div className='teamMemberText'>                
+                <div className='teamMemberText'>
                 </div>
                 <div className='customText'>
                   <a href='https://twitter.com/steveisdajackal' target="_blank" >
@@ -597,12 +594,12 @@ function App() {
                   </a>
                 </div>
               </div>
-              </Grid.Column>
+            </Grid.Column>
           </Grid.Row>
         </Grid>
       </Container>
 
-      <Container id='infoContainer' fluid textAlign='center'>
+      <Container id='footer' fluid textAlign='center'>
         <Grid stackable container columns='equal'>
           <Grid.Column>
           </Grid.Column>
