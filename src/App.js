@@ -2,8 +2,11 @@ import React, { useEffect, useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { connect } from "./redux/blockchain/blockchainActions";
 import { fetchData } from "./redux/data/dataActions";
-import drifter4 from "./assets/images/4_2.png";
-import drifter5 from "./assets/images/blackedoutninja.png";
+import drifter1 from "./assets/images/1.png";
+import drifter2 from "./assets/images/2.png";
+import drifter3 from "./assets/images/3.png";
+import drifter4 from "./assets/images/4.png";
+import logo from "./assets/images/logo.png";
 import coverPhoto from "./assets/images/coverphoto.png";
 import { Button, Container, Header, Image, Menu, Progress, Segment, Label, Grid, Divider, Step, List, Card, Icon, Statistic } from 'semantic-ui-react'
 
@@ -312,7 +315,8 @@ function App() {
         )}
       </Container> */}
 
-      <Image src={coverPhoto} fluid></Image>
+      <Image id='coverPhoto' src={coverPhoto} fluid>
+      </Image>
       <Container>
       </Container>
       <Container id='customContainer'>
@@ -356,9 +360,9 @@ function App() {
               <div className="timeline-body">
                 <h4 className="timeline-title"><span className="badge">Q4 2021</span></h4>
                 <p>
-                ‣ Sale of 11,111 Drifters <br/>
-                ‣ Design SEC-compliant staking system and currency <br/>
-                ‣ Community fund contributions begin <br/>
+                  ‣ Sale of 11,111 Drifters <br />
+                  ‣ Design SEC-compliant staking system and currency <br />
+                  ‣ Community fund contributions begin <br />
                 </p>
                 <p className="timeline-subtitle"></p>
               </div>
@@ -370,8 +374,8 @@ function App() {
               <div className="timeline-body">
                 <h4 className="timeline-title"><span className="badge">Q1 2022</span></h4>
                 <p>
-                ‣ Implement & launch staking system <br/>
-                ‣ Begin recruitment for Driftopia <br/>
+                  ‣ Implement & launch staking system <br />
+                  ‣ Begin recruitment for Driftopia <br />
                 </p>
                 <p className="timeline-subtitle"></p>
               </div>
@@ -383,8 +387,8 @@ function App() {
               <div className="timeline-body">
                 <h4 className="timeline-title"><span className="badge">Q2 2022</span></h4>
                 <p>
-                ‣ Release companion NFT <br/>
-                ‣ Begin land scouting for Driftopia <br/>
+                  ‣ Release companion NFT <br />
+                  ‣ Begin land scouting for Driftopia <br />
                 </p>
                 <p className="timeline-subtitle"></p>
               </div>
@@ -396,8 +400,8 @@ function App() {
               <div className="timeline-body">
                 <h4 className="timeline-title"><span className="badge">Q3 2022</span></h4>
                 <p>
-                ‣ Launch SEC complaint Driftopian currency <br/>
-                ‣ Seed round funding for starter Driftopia community <br/>
+                  ‣ Launch SEC complaint Driftopian currency <br />
+                  ‣ Seed round funding for starter Driftopia community <br />
                 </p>
                 <p className="timeline-subtitle"></p>
               </div>
@@ -414,41 +418,188 @@ function App() {
         <div className='customSubheader'>
           Team
         </div>
-        <div className='teamMember'>
-          <Image bordered rounded size='medium' src={drifter4} circular />
-          <div className='customText'>
-            OrigamiHands
+        <Grid textAlign='center' columns={3}>
+          <Grid.Row>
+            <Grid.Column centered>
+              <div className='teamMember'>
+                <Image bordered rounded size='medium' src={drifter1} circular centered/>
+                <div className='customTeamMemberName'>
+                  Henry Zhou
+                </div>
+                <Label color='green'>DOXXED</Label>
+                <div className='teamMemberTitle'>
+                // Project Lead, Art Director, Technology
+                </div>
+                <div className='teamMemberText'>
+                  My life mission is to contribute to the improvement of our world through sustainable energy, farming, and the spread of truthful information.
+                </div>
+                <div className='customText'>
+                  <a href='https://twitter.com/henrylzhou' target="_blank" >
+                    <Icon color='blue' link name='twitter' />
+                  </a>
+                </div>
+              </div>
+              </Grid.Column>
+            <Grid.Column>
+              <div className='teamMember'>
+                <Image bordered rounded size='medium' src={drifter2} circular centered/>
+                <div className='customTeamMemberName'>
+                  Thecyple
+                </div>
+                <div className='teamMemberTitle'>
+                // Project Advisor, Art & Brand Strategy
+                </div>
+                <div className='teamMemberText'>
+                Quit his career as a carpenter to go full time into NFTs. Founder of GNOGEN Studios and core advisor to Drifters
+                </div>
+                <div className='customText'>
+                  <a href='https://twitter.com/thecyple' target="_blank" >
+                    <Icon color='blue' link name='twitter' />
+                  </a>
+                </div>
+              </div>
+              </Grid.Column>
+            <Grid.Column>
+              <div className='teamMember'>
+                <Image bordered rounded size='medium' src={drifter4} circular centered/>
+                <div className='customTeamMemberName'>
+                  Dajackal
+                </div>
+                <div className='teamMemberTitle'>
+                // Architectural Designer, Urban Theorist, Graphics Designer
+                </div>
+                <div className='teamMemberText'>
+                  I strive to design places for people to connect with their community and the built and natural environments. It is my responsibility to build community through design and create an urban fabric around my buildings that is socially and environmentally healthy.
+                </div>
+                <div className='customText'>
+                  <a href='https://twitter.com/steveisdajackal' target="_blank" >
+                    <Icon color='blue' link name='twitter' />
+                  </a>
+                </div>
+              </div>
+              </Grid.Column>
+          </Grid.Row>
 
-            <Label as='a' color='green'>DOXXED</Label>
-          </div>
-          <div className='customText'>
-                  // Project Lead, Technology, Art Director
-          </div>
-          <div className='customText'>
-            He made successful investments in crypto and is now investing all the proceeds into Drifters.
-          </div>
-          <a href='https://twitter.com/henrylzhou' target="_blank" >
-            <Icon size='medium' color='blue' link name='twitter' />
-          </a>
-        </div>
+          <Grid.Row>
+            <Grid.Column centered>
+              <div className='teamMember'>
+                <Image bordered rounded size='medium' src={logo} circular centered/>
+                <div className='customTeamMemberName'>
+                Wanacool
+                </div>
+                <div className='teamMemberTitle'>
+                // Moderator
+                </div>
+                <div className='teamMemberText'>
+                NFT enthusiast, hardcore gamer, and anime fan. Marketing Direct at CNFT called @AktiumCNFT. 
+                </div>
+                <div className='customText'>
+                  <a href='https://twitter.com/wanacol' target="_blank" >
+                    <Icon color='blue' link name='twitter' />
+                  </a>
+                </div>
+              </div>
+              </Grid.Column>
+            <Grid.Column>
+              <div className='teamMember'>
+                <Image bordered rounded size='medium' src={logo} circular centered/>
+                <div className='customTeamMemberName'>
+                  Cocobeans
+                </div>
+                <div className='teamMemberTitle'>
+                // Moderator
+                </div>
+                <div className='teamMemberText'>
+                Aiming to build a strong, safe, and lively community for all of the drifters
+                </div>
+                <div className='customText'>
+                  <a href='https://twitter.com/_CoCoBeans_' target="_blank" >
+                    <Icon color='blue' link name='twitter' />
+                  </a>
+                </div>
+              </div>
+              </Grid.Column>
+            <Grid.Column>
+              <div className='teamMember'>
+                <Image bordered rounded size='medium' src={logo} circular centered/>
+                <div className='customTeamMemberName'>
+                  Dravyn
+                </div>
+                <div className='teamMemberTitle'>
+                // Moderator
+                </div>
+                <div className='teamMemberText'>
+                Producer, artist, and crypto/nft investor looking to build with the new generation of creatives.
+                </div>
+                <div className='customText'>
+                  <a href='https://twitter.com/dravynmusic' target="_blank" >
+                    <Icon color='blue' link name='twitter' />
+                  </a>
+                </div>
+              </div>
+              </Grid.Column>
+          </Grid.Row>
+          
 
-        <div className='teamMember'>
-          <Image bordered rounded size='medium' src={drifter5} circular />
-          <div className='teamMemberName'>
-            thecyple
-          </div>
-          <div className='teamMemberTitle'>
-          // Project Advisor, Art & Brand Strategy
-          </div>
-          <div className='teamMemberDescription'>
-
-            Quit his career as a carpenter to go full time into NFTs.Founder of GNOGEN Studios and core advisor to Drifters.
-
-          </div>
-          <a href='https://twitter.com/thecyple' target="_blank" >
-            <Icon size='medium' color='blue' link name='twitter' />
-          </a>
-        </div>
+          <Grid.Row>
+            <Grid.Column centered>
+              <div className='teamMember'>
+                <Image bordered rounded size='medium' src={logo} circular centered/>
+                <div className='customTeamMemberName'>
+                Austin C
+                </div>
+                <div className='teamMemberTitle'>
+                // Moderator
+                </div>
+                <div className='teamMemberText'>
+  Bio: Finance professional living in Vancouver who also dabbles in crypto, electronic music, and NFTs. 
+                </div>
+                <div className='customText'>
+                  <a href='https://twitter.com/wanacol' target="_blank" >
+                    <Icon color='blue' link name='twitter' />
+                  </a>
+                </div>
+              </div>
+              </Grid.Column>
+            <Grid.Column>
+              <div className='teamMember'>
+                <Image bordered rounded size='medium' src={logo} circular centered/>
+                <div className='customTeamMemberName'>
+                  Cocobeans
+                </div>
+                <div className='teamMemberTitle'>
+                // Moderator
+                </div>
+                <div className='teamMemberText'>
+                Aiming to build a strong, safe, and lively community for all of the drifters
+                </div>
+                <div className='customText'>
+                  <a href='https://twitter.com/ilasannn' target="_blank" >
+                    <Icon color='blue' link name='twitter' />
+                  </a>
+                </div>
+              </div>
+              </Grid.Column>
+            <Grid.Column>
+              <div className='teamMember'>
+                <Image bordered rounded size='medium' src={logo} circular centered/>
+                <div className='customTeamMemberName'>
+                  Justin
+                </div>
+                <div className='teamMemberTitle'>
+                // Moderator
+                </div>
+                <div className='teamMemberText'>                
+                </div>
+                <div className='customText'>
+                  <a href='https://twitter.com/steveisdajackal' target="_blank" >
+                    <Icon color='blue' link name='twitter' />
+                  </a>
+                </div>
+              </div>
+              </Grid.Column>
+          </Grid.Row>
+        </Grid>
       </Container>
 
       <Container id='infoContainer' fluid textAlign='center'>

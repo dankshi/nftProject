@@ -69,45 +69,13 @@ body{
     padding: 5px 0px;
 }
 
-.customHeader{
-    font-weight: 100 !important;
-    color:#F2711C !important;
-    padding-bottom: 20px;
-    text-transform: uppercase !important;
-}
-
-.customSubheaderSmall{
-    color: #1C9DF2 !important;
-    text-transform: uppercase !important;
-    margin-top: 5px;
-    padding-bottom: 5px;
-    font-size: 1em;
-    letter-spacing: .1em;
-}
-
-.darkCard{
-    color:#E3E3E3;
-    background-color: #121212;
-    min-height: 250px;
-    border-radius: .3em;
-    padding:5px;
-}
-
-.darkCard:hover{
-    background-color: #2C2C2C;
-}
-
-.darkCard .title{
-    letter-spacing: .1em;
-    font-size: 1em;
-    padding-top: 15px;
-    text-transform: uppercase !important;
-    color: #1C9DF2 !important;
-
-}
-
-.darkCard .text{
-    padding:20px;
+.customTeamMemberName{
+    font-family: 'good-times', sans-serif !important;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.5em;
+    padding: 20px 0 5px 0;
+    color:#1C9DF2;
 }
 
 .customStatistic{
@@ -126,11 +94,18 @@ body{
 
 }
 .teamMemberTitle{
-    color: #1C9DF2 !important;
-    font-size: .6em;
+    font-size: .8em;
     letter-spacing: .1em;
-    margin-bottom: 5px;
+    margin: 5px 0 5px 0;
+    font-weight: bold;
 }
+
+.teamMemberText{
+    font-size: .8em;
+    letter-spacing: .1em;
+    margin: 5px 0 5px 0;
+}
+
 .teamMemberDescription{
     font-size: .6em;
     letter-spacing: .1em;
@@ -144,20 +119,14 @@ body{
     margin-bottom: 20px;
 }
 
-/* Timeline CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .teamMember{
-    margin: 50px;
-    width:250px;
-    float:left;
-
 }
 
 .dividerSpacing{
     padding: 50px 0;
+}
+
+#coverPhoto{
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
 }
