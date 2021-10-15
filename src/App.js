@@ -418,17 +418,16 @@ function App() {
           Team
         </div>
         <div className='teamMember'>
-
-          <Image bordered rounded size='medium' src={drifter4} />
-          <div className='teamMemberName'>
+          <Image bordered rounded size='medium' src={drifter4} circular/>
+          <div className='customText'>
             OrigamiHands
             
         <Label as='a' color='green'>DOXXED</Label>
           </div>
-          <div className='teamMemberTitle'>
+          <div className='customText'>
                   // Project Lead, Technology, Art Director
           </div>
-          <div className='teamMemberDescription'>
+          <div className='customText'>
             He made successful investments in crypto and is now investing all the proceeds into Drifters.
           </div>
           <a href='https://twitter.com/henrylzhou' target="_blank" >
@@ -437,7 +436,7 @@ function App() {
         </div>
 
         <div className='teamMember'>
-          <Image bordered rounded size='medium' src={drifter5} />
+          <Image bordered rounded size='medium' src={drifter5} circular/>
           <div className='teamMemberName'>
           thecyple
           </div>

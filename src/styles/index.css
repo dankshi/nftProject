@@ -150,3 +150,10 @@ body{
     padding: 0;
     box-sizing: border-box;
 }
+
+.teamMember{
+    margin: 50px;
+    width:250px;
+    float:left;
+
+}
