@@ -7,6 +7,7 @@ import { Provider } from "react-redux";
 import '../src/styles/font.css';
 import 'semantic-ui-css/semantic.min.css';
 import '../src/styles/index.css';
+import '../src/styles/timeline.scss';
 
 ReactDOM.render(
   <Provider store={store}>

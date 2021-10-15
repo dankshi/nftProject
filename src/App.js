@@ -320,7 +320,7 @@ function App() {
           Welcome to Driftopia
         </div>
         <div id='welcomeToDriftopiaText'>
-          The gathering place for an elite force of 11,111 warriors who will usher in the new world.<br/><br/>
+          The gathering place for an elite force of 11,111 warriors who will usher in the new world.<br /><br />
           Hosted on the Ethereum Blockchain.
         </div>
         <div id='whitepaperButton'>
@@ -329,16 +329,16 @@ function App() {
           </a>
           <a href='discord.gg/driftersnft' target="_blank" >
             <Button inverted icon='discord' />
-          </a>          
+          </a>
         </div>
       </Container>
 
       {/* <Container id='overlayContainer'>
         testttt
       </Container> */}
-      
+
       <Container>
-      <Divider/>
+        <Divider />
         <div className='customSubheader'>
           Road Map
         </div>
@@ -346,123 +346,114 @@ function App() {
           The core object of Drifters NFT is to branch out into creating real world change.
         </div>
         <div className="timelineContainer">
-            <div className="timeline">
-                <div className="timeline-container primary">
-                    <div className="timeline-icon">
-                        <i className="far fa-grin-wink"></i>
-                    </div>
-                    <div className="timeline-body">
-                        <h4 className="timeline-title"><span className="badge">Primary</span></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                        <p className="timeline-subtitle">1 Hours Ago</p>
-                    </div>
-                </div>
-                <div className="timeline-container danger">
-                    <div className="timeline-icon">
-                        <i className="far fa-grin-hearts"></i>
-                    </div>
-                    <div className="timeline-body">
-                        <h4 className="timeline-title"><span className="badge">Danger</span></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                        <p className="timeline-subtitle">2 Hours Ago</p>
-                    </div>
-                </div>
-                <div className="timeline-container success">
-                    <div className="timeline-icon">
-                        <i className="far fa-grin-tears"></i>
-                    </div>
-                    <div className="timeline-body">
-                        <h4 className="timeline-title"><span className="badge">Success</span></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                        <p className="timeline-subtitle">6 Hours Ago</p>
-                    </div>
-                </div>
-                <div className="timeline-container warning">
-                    <div className="timeline-icon">
-                        <i className="far fa-grimace"></i>
-                    </div>
-                    <div className="timeline-body">
-                        <h4 className="timeline-title"><span className="badge">Warning</span></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                        <p className="timeline-subtitle">1 Day Ago</p>
-                    </div>
-                </div>
-                <div className="timeline-container">
-                    <div className="timeline-icon">
-                        <i className="far fa-grin-beam-sweat"></i>
-                    </div>
-                    <div className="timeline-body">
-                        <h4 className="timeline-title"><span className="badge">Secondary</span></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                        <p className="timeline-subtitle">3 Days Ago</p>
-                    </div>
-                </div>
-                <div className="timeline-container info">
-                    <div className="timeline-icon">
-                        <i className="far fa-grin"></i>
-                    </div>
-                    <div className="timeline-body">
-                        <h4 className="timeline-title"><span className="badge">Info</span></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                        <p className="timeline-subtitle">4 Days Ago</p>
-                    </div>
-                </div>
+          <div className="timeline">
+            <div className="timeline-container primary">
+              <div className="timeline-icon">
+                <i className="far fa-grin-wink"></i>
+              </div>
+              <div className="timeline-body">
+                <h4 className="timeline-title"><span className="badge">Primary</span></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
+                <p className="timeline-subtitle">1 Hours Ago</p>
+              </div>
             </div>
+            <div className="timeline-container danger">
+              <div className="timeline-icon">
+                <i className="far fa-grin-hearts"></i>
+              </div>
+              <div className="timeline-body">
+                <h4 className="timeline-title"><span className="badge">Danger</span></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
+                <p className="timeline-subtitle">2 Hours Ago</p>
+              </div>
+            </div>
+            <div className="timeline-container success">
+              <div className="timeline-icon">
+                <i className="far fa-grin-tears"></i>
+              </div>
+              <div className="timeline-body">
+                <h4 className="timeline-title"><span className="badge">Success</span></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
+                <p className="timeline-subtitle">6 Hours Ago</p>
+              </div>
+            </div>
+            <div className="timeline-container warning">
+              <div className="timeline-icon">
+                <i className="far fa-grimace"></i>
+              </div>
+              <div className="timeline-body">
+                <h4 className="timeline-title"><span className="badge">Warning</span></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
+                <p className="timeline-subtitle">1 Day Ago</p>
+              </div>
+            </div>
+            <div className="timeline-container">
+              <div className="timeline-icon">
+                <i className="far fa-grin-beam-sweat"></i>
+              </div>
+              <div className="timeline-body">
+                <h4 className="timeline-title"><span className="badge">Secondary</span></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
+                <p className="timeline-subtitle">3 Days Ago</p>
+              </div>
+            </div>
+            <div className="timeline-container info">
+              <div className="timeline-icon">
+                <i className="far fa-grin"></i>
+              </div>
+              <div className="timeline-body">
+                <h4 className="timeline-title"><span className="badge">Info</span></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
+                <p className="timeline-subtitle">4 Days Ago</p>
+              </div>
+            </div>
+          </div>
         </div>
       </Container>
 
       <Container>
-        
-      <Divider/>
+
+        <Divider />
         <div className='customSubheader'>
           Team
         </div>
-      </Container>
+        <div className='teamMember'>
 
-      <Container id='infoContainerInverted' fluid >
-        <Container>
-          <Grid stackable columns='equal' centered>
-            <Grid.Row>
-              <Grid.Column width={5} >
-                <Image bordered rounded size='medium' src={drifter4} />
-                <div className='teamMemberName'>
-                  OrigamiHands
-                </div>
-                <div className='teamMemberTitle'>
+          <Image bordered rounded size='medium' src={drifter4} />
+          <div className='teamMemberName'>
+            OrigamiHands
+            
+        <Label as='a' color='green'>DOXXED</Label>
+          </div>
+          <div className='teamMemberTitle'>
                   // Project Lead, Technology, Art Director
-                </div>
-                <div className='teamMemberDescription'>
-                  He made successful investments in crypto and is now investing all the proceeds into Drifters.
-                </div>
-                <a href='https://twitter.com/henrylzhou' target="_blank" >
-                  <Icon size='medium' color='blue' link name='twitter' />
-                </a>
-              </Grid.Column>
+          </div>
+          <div className='teamMemberDescription'>
+            He made successful investments in crypto and is now investing all the proceeds into Drifters.
+          </div>
+          <a href='https://twitter.com/henrylzhou' target="_blank" >
+            <Icon size='medium' color='blue' link name='twitter' />
+          </a>
+        </div>
 
-              <Grid.Column width={5}>
-                <Image bordered rounded size='medium' src={drifter5} />
-                <div className='teamMemberName'>
-                  thecyple
-                </div>
-                <div className='teamMemberTitle'>
-                  // Project Advisor, Art & Brand Strategy
-                </div>
-                <div className='teamMemberDescription'>
+        <div className='teamMember'>
+          <Image bordered rounded size='medium' src={drifter5} />
+          <div className='teamMemberName'>
+          thecyple
+          </div>
+          <div className='teamMemberTitle'>
+          // Project Advisor, Art & Brand Strategy
+          </div>
+          <div className='teamMemberDescription'>
 
-                  Quit his career as a carpenter to go full time into NFTs. Founder of GNOGEN Studios and core advisor to Drifters.
+          Quit his career as a carpenter to go full time into NFTs.Founder of GNOGEN Studios and core advisor to Drifters.
 
-                </div>
-                <a href='https://twitter.com/thecyple' target="_blank" >
-                  <Icon size='medium' color='blue' link name='twitter' />
-                </a>
-              </Grid.Column>
-            </Grid.Row>
-
-
-          </Grid>
-        </Container>
+          </div>
+          <a href='https://twitter.com/thecyple' target="_blank" >
+          <Icon size='medium' color='blue' link name='twitter' />
+          </a>
+        </div>
       </Container>
-
 
       <Container id='infoContainer' fluid textAlign='center'>
         <Grid stackable container columns='equal'>
