@@ -126,10 +126,6 @@ body{
     padding: 50px 0;
 }
 
-#coverPhoto{
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
-}
 #footer{
     padding:150px 0 100px 0;
 }
