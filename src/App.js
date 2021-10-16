@@ -425,9 +425,9 @@ function App() {
               <div className='teamMember'>
                 <Image bordered rounded size='medium' src={drifter1} circular centered />
                 <div className='customTeamMemberName'>
-                  Henry Zhou&nbsp;       
-                <a href='https://discord.com/channels/890772303623897139/890772304123002914/896169278938697739' target="_blank" >
-                <Label color='green' size='tiny'>DOXXED</Label>
+                  Henry Zhou&nbsp;
+                  <a href='https://discord.com/channels/890772303623897139/890772304123002914/896169278938697739' target="_blank" >
+                    <Label color='green' size='tiny'>DOXXED</Label>
                   </a>
                 </div>
                 <div className='teamMemberTitle'>
@@ -435,6 +435,9 @@ function App() {
                 </div>
                 <div className='teamMemberText'>
                   My life mission is to contribute to the improvement of our world through sustainable energy, farming, and the spread of truthful information.
+                  <br />
+                  <br />
+                  <br />
                 </div>
                 <div className='customText'>
                   <a href='https://twitter.com/henrylzhou' target="_blank" >
@@ -454,6 +457,10 @@ function App() {
                 </div>
                 <div className='teamMemberText'>
                   Quit his career as a carpenter to go full time into NFTs. Founder of GNOGEN Studios and core advisor to Drifters
+                  <br />
+                  <br />
+                  <br />
+                  <br />
                 </div>
                 <div className='customText'>
                   <a href='https://twitter.com/thecyple' target="_blank" >
@@ -486,7 +493,7 @@ function App() {
                 <Image bordered rounded size='medium' src={logo} circular centered />
                 <div className='customTeamMemberName'>
                   Colter Harris&nbsp;
-                <Label color='green' size='tiny'>DOXXED</Label>
+                  <Label color='green' size='tiny'>DOXXED</Label>
                 </div>
                 <div className='teamMemberTitle'>
                 // Moderator
@@ -587,7 +594,7 @@ function App() {
                 // Moderator
                 </div>
                 <div className='teamMemberText'>
-                Community is number one, always trying to improve, Die-Hard NFL fan.
+                  Community is number one, always trying to improve, Die-Hard NFL fan.
                 </div>
                 <div className='customText'>
                   <a href='https://twitter.com/HarrisGrayden' target="_blank" >
