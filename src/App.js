@@ -587,8 +587,12 @@ function App() {
                 // Moderator
                 </div>
                 <div className='teamMemberText'>
+                Community is number one, always trying to improve, Die-Hard NFL fan.
                 </div>
                 <div className='customText'>
+                  <a href='https://twitter.com/HarrisGrayden' target="_blank" >
+                    <Icon color='blue' link name='twitter' />
+                  </a>
                 </div>
               </div>
             </Grid.Column>
