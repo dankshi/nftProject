@@ -324,7 +324,8 @@ function App() {
           Welcome to Driftopia
         </div>
         <div id='welcomeToDriftopiaText'>
-          The gathering place for an elite force of 11,111 warriors who will usher in the new world.<br /><br />
+          Drifters are ones who are from beyond this planet. They are the light bringers to a darkened world. Deep down Drifters feel unease and fantasize about a life in a harmonious world.
+          Slowly, 11,1111 Drifters are being awakened across the world who will usher in the new world.<br /><br />
           Hosted on the Ethereum Blockchain.
         </div>
         <div id='whitepaperButton'>
@@ -401,7 +402,7 @@ function App() {
                 <h4 className="timeline-title"><span className="badge">Q3 2022</span></h4>
                 <p>
                   ‣ Launch SEC complaint Driftopian currency <br />
-                  ‣ Seed round funding for starter Driftopia community <br />
+                  ‣ Funding seed round for starter Driftopia community <br />
                 </p>
                 <p className="timeline-subtitle"></p>
               </div>
@@ -480,6 +481,26 @@ function App() {
                 </div>
               </div>
             </Grid.Column>
+            <Grid.Column>
+              <div className='teamMember'>
+                <Image bordered rounded size='medium' src={logo} circular centered />
+                <div className='customTeamMemberName'>
+                  Colter Harris&nbsp;
+                <Label color='green' size='tiny'>DOXXED</Label>
+                </div>
+                <div className='teamMemberTitle'>
+                // Moderator
+                </div>
+                <div className='teamMemberText'>
+                  Aiming to build a strong, safe, and lively community for all of the drifters
+                </div>
+                <div className='customText'>
+                  <a href='https://twitter.com/_CoCoBeans_' target="_blank" >
+                    <Icon color='blue' link name='twitter' />
+                  </a>
+                </div>
+              </div>
+            </Grid.Column>
             <Grid.Column centered>
               <div className='teamMember'>
                 <Image bordered rounded size='medium' src={logo} circular centered />
@@ -494,25 +515,6 @@ function App() {
                 </div>
                 <div className='customText'>
                   <a href='https://twitter.com/wanacol' target="_blank" >
-                    <Icon color='blue' link name='twitter' />
-                  </a>
-                </div>
-              </div>
-            </Grid.Column>
-            <Grid.Column>
-              <div className='teamMember'>
-                <Image bordered rounded size='medium' src={logo} circular centered />
-                <div className='customTeamMemberName'>
-                  Cocobeans
-                </div>
-                <div className='teamMemberTitle'>
-                // Moderator
-                </div>
-                <div className='teamMemberText'>
-                  Aiming to build a strong, safe, and lively community for all of the drifters
-                </div>
-                <div className='customText'>
-                  <a href='https://twitter.com/_CoCoBeans_' target="_blank" >
                     <Icon color='blue' link name='twitter' />
                   </a>
                 </div>
@@ -565,21 +567,6 @@ function App() {
                 <Image bordered rounded size='medium' src={logo} circular centered />
                 <div className='customTeamMemberName'>
                   Justin
-                </div>
-                <div className='teamMemberTitle'>
-                // Moderator
-                </div>
-                <div className='teamMemberText'>
-                </div>
-                <div className='customText'>
-                </div>
-              </div>
-            </Grid.Column>
-            <Grid.Column>
-              <div className='teamMember'>
-                <Image bordered rounded size='medium' src={logo} circular centered />
-                <div className='customTeamMemberName'>
-                  Siun
                 </div>
                 <div className='teamMemberTitle'>
                 // Moderator
