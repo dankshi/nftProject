@@ -469,7 +469,7 @@ function App() {
                   Dajackal
                 </div>
                 <div className='teamMemberTitle'>
-                // Architectural Designer, Urban Theorist, Graphics Designer
+                // Architectural Designer, Urban Theorist
                 </div>
                 <div className='teamMemberText'>
                   I strive to design places for people to connect with their community and the built and natural environments. It is my responsibility to build community through design and create an urban fabric around my buildings that is socially and environmentally healthy.
