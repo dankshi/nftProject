@@ -518,7 +518,7 @@ function App() {
                 // Moderator
                 </div>
                 <div className='teamMemberText'>
-                  NFT enthusiast, hardcore gamer, and anime fan. Marketing Direct at CNFT called @AktiumCNFT.
+                  NFT enthusiast, hardcore gamer, and anime fan. I do marketing at AktiumCNFT.
                 </div>
                 <div className='customText'>
                   <a href='https://twitter.com/wanacol' target="_blank" >
