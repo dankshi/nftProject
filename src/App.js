@@ -579,8 +579,17 @@ function App() {
                 // Moderator
                 </div>
                 <div className='teamMemberText'>
+                Grandma's Boy. 
+                Born and raised in Malaysia.
+                English/Mandarin/Malay.
+                Love to spend time with my family and friends. 
+                Feel lucky to be exposed to crypto/NFT at an early age, it's life changing. 
+                I'm glad to be here with you guys.
                 </div>
                 <div className='customText'>
+                  <a href='https://twitter.com/Nitsuj14127009' target="_blank" >
+                    <Icon color='blue' link name='twitter' />
+                  </a>
                 </div>
               </div>
             </Grid.Column>
