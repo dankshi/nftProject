@@ -325,7 +325,7 @@ function App() {
         </div>
         <div id='welcomeToDriftopiaText'>
           Drifters are ones who are from beyond this planet. They are the light bringers to a darkened world. Deep down Drifters feel unease and fantasize about a life in a harmonious world.
-          Slowly, 11,1111 Drifters are being awakened to usher in the new world.<br /><br />
+          Slowly, 11,1111 Drifters are being gathered to usher in the new world.<br /><br />
           Hosted on the Ethereum Blockchain.
         </div>
         <div id='whitepaperButton'>
