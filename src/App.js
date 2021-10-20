@@ -341,22 +341,7 @@ function App() {
       {/* <Container id='overlayContainer'>
         testttt
       </Container> */}
-
-
-      <Container>
-        <div className='dividerSpacing'>
-          <Divider />
-        </div>
-
-        <div className='customSubheader'>
-          Drifter NFT Utility
-        </div>
-        <div className='customText'>
-          <Image src={staking}/>
-        </div>
-      </Container>
-
-      
+     
       <Container>
         <div className='dividerSpacing'>
           <Divider />
