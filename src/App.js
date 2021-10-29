@@ -327,7 +327,7 @@ function App() {
             <Button inverted>Whitepaper</Button>
           </a>
           <a href='discord.gg/driftersnft' target="_blank" >
-            <Button inverted icon='discord' />
+          <Button inverted>Discord</Button>
           </a>
         </div>
       </Container>
