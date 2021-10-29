@@ -315,12 +315,10 @@ function App() {
       <Image id='coverPhoto' src={coverPhoto}/>
       <Container id='customContainer'>
         <div id='welcomeToDriftopia'>
-          Welcome to Driftopia
+          Drifter Mission
         </div>
         <div id='welcomeToDriftopiaText'>
-          Drifters are ones who are from beyond this planet. They are the light bringers to a darkened world. Deep down Drifters feel unease and fantasize about a life in a harmonious world.
-          Slowly, 11,1111 Drifters are being gathered to usher in the new world.<br /><br />
-          Hosted on the Ethereum Blockchain.
+          The Drifter Mission is comprised of a series of projects to break members from old world systems. The Drifter Mission will realize the full potential of web3 and spread it's benefits to society. 
         </div>
         <div id='whitepaperButton'>
           <a href='https://docs.google.com/document/d/184NqMc2SwI4_vRAvWNT0AqSEOC3ySLMQV5jGx5rJsPk/edit?usp=sharing' target="_blank" >
