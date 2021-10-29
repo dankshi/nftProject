@@ -112,9 +112,6 @@ function App() {
             <Menu.Item href='https://twitter.com/drifters_nft' target="_blank">
               <Icon link name='twitter' />
             </Menu.Item>
-            <Menu.Item href='https://www.instagram.com/drifters_nft/' target="_blank">
-              <Icon link name='instagram' />
-            </Menu.Item>
             <Menu.Item href='https://discord.gg/336EgsNfwV' target="_blank" >
               <Icon link name='discord' />
             </Menu.Item>
@@ -351,10 +348,6 @@ function App() {
           Driftopia will be the first off-grid crypto community.<br/><br/>
 
           It will feature sustainable technology and a community focused on general wellbeing and financial freedom.<br/><br/>
-
-          AURA is the currency for Driftopia.<br/><br/>
-
-          AURA can be used for anything from housing to reacreational activity.<br/><br/>
         </div>
       </Container>
 
