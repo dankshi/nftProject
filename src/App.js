@@ -315,10 +315,7 @@ function App() {
         )}
       </Container> */}
 
-      <Image id='coverPhoto' src={coverPhoto} fluid>
-      </Image>
-      <Container>
-      </Container>
+      <Image id='coverPhoto' src={coverPhoto}/>
       <Container id='customContainer'>
         <div id='welcomeToDriftopia'>
           Welcome to Driftopia
