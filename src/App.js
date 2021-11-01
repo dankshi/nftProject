@@ -318,8 +318,9 @@ function App() {
           BEYOND THE METAVERSE
         </div>
         <div id='welcomeToDriftopiaText'>
-          The Drifter Project is a series of projects designed to free people from old-world systems through the use of web3 technology. The Drifter Mission is to realize the full potential of web3 and spread it's benefits to society. 
-        </div>
+        The Drifter Project is a series of projects designed to free people from old-world systems through the use of web3 technology. <br/><br/>
+
+The Drifter Project will free people from their 9-5s, build a self-sustaining city and economy that is run by the people, and create a metaverse project where value can be transferred to real life.</div>
         <div id='whitepaperButton'>
           <a href='https://docs.google.com/document/d/184NqMc2SwI4_vRAvWNT0AqSEOC3ySLMQV5jGx5rJsPk/edit?usp=sharing' target="_blank" >
             <Button inverted>Whitepaper</Button>
