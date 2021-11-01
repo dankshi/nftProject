@@ -315,10 +315,10 @@ function App() {
       <Image id='coverPhoto' src={coverPhoto}/>
       <Container id='customContainer'>
         <div id='welcomeToDriftopia'>
-          Drifter Mission
+          BEYOND THE METAVERSE
         </div>
         <div id='welcomeToDriftopiaText'>
-          The Drifter Mission is comprised of a series of projects to break members from old world systems. The Drifter Mission will realize the full potential of web3 and spread it's benefits to society. 
+          The Drifter Project is a series of projects designed to free people from old-world systems through the use of web3 technology. The Drifter Mission is to realize the full potential of web3 and spread it's benefits to society. 
         </div>
         <div id='whitepaperButton'>
           <a href='https://docs.google.com/document/d/184NqMc2SwI4_vRAvWNT0AqSEOC3ySLMQV5jGx5rJsPk/edit?usp=sharing' target="_blank" >
@@ -340,14 +340,71 @@ function App() {
         </div>
 
         <div className='customSubheader'>
-          What is Driftopia?
+          01 DRIFTER AVATAR
         </div>
         <div className='customText'>
-          Driftopia will be the first off-grid crypto community.<br/><br/>
-
-          It will feature sustainable technology and a community focused on general wellbeing and financial freedom.<br/><br/>
+        Drifter Avatar is the entry point and serves as membership access to all Drifter launched projects.<br/><br/>
         </div>
       </Container>
+
+
+      <Container>
+        <div className='dividerSpacing'>
+          <Divider />
+        </div>
+
+        <div className='customSubheader'>
+          02 DRIFTOPIA
+        </div>
+        <div className='customText'>
+        Driftopia is a physical eco-village built around sustainability. The ever-increasing rent and a lack of an inspiring place to live is a consequence of old-world systems. Driftopia is reimagining the way we build, live, and commune. It is the physical manifestation of web3.<br/><br/>
+        </div>
+      </Container>
+
+      
+      <Container>
+        <div className='dividerSpacing'>
+          <Divider />
+        </div>
+
+        <div className='customSubheader'>
+          03 THE GATEWAY PROJECT
+        </div>
+        <div className='customText'>
+        All talent required for Drifter Projects will be crowdsourced from within the community. <br/><br/>
+
+        The Drifter foundation will give grants to financially support members to start up their own projects. Each project will be added to the Drifter ecosystem. Drifter holders will receive priority access and benefits to these projects.<br/><br/>
+        </div>
+      </Container>
+
+      
+      <Container>
+        <div className='dividerSpacing'>
+          <Divider />
+        </div>
+
+        <div className='customSubheader'>
+          04 METACITY
+        </div>
+        <div className='customText'>
+        Metacity an open-world futuristic metropolis. Members are able to own land, create and trade assets, and earn real-world rewards.<br/><br/>
+        </div>
+      </Container>
+
+      
+      <Container>
+        <div className='dividerSpacing'>
+          <Divider />
+        </div>
+
+        <div className='customSubheader'>
+        05 AURA
+        </div>
+        <div className='customText'>
+        $AURA is the Driftopian currency that is used in both Driftopia and Metacity. This means that earning $AURA in Metacity will yield real-world utility, such as exchanging it for rent and food in Driftopia. Members are able to contribute and participate in the Drifter ecosystem physically and/or digitally.<br/><br/>
+        </div>
+      </Container>
+
 
       <Container>
         <div className='dividerSpacing'>
