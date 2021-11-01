@@ -330,7 +330,12 @@ The Drifter Project will free people from their 9-5s, build a self-sustaining ci
           </a>
         </div>
       </Container>
+      <Divider hidden/>
+      <Divider hidden/>
+      <Container textAlign='center'>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/FattbSQnlTQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+      </Container>
       {/* <Container id='overlayContainer'>
         testttt
       </Container> */}
