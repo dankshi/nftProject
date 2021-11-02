@@ -311,8 +311,6 @@ function App() {
           </div>
         )}
       </Container> */}
-
-<div id='testDiv'>test div</div>
       <Image id='coverPhoto' src={coverPhoto} />
       <Container id='customContainer'>
         <div id='welcomeToDriftopia'>
