@@ -1,5 +1,5 @@
 .ui {
-    font-family: "good-times", sans-serif !important;
+    font-family: "Orbitron", sans-serif !important;
     font-weight: 200;
     font-style: normal;
     /* font-family: "Montserrat" !important; */
@@ -22,7 +22,7 @@ body {
     padding: 0 0 20px 0 !important;
 }
 #welcomeToDriftopia {
-    font-family: "pirulen", sans-serif !important;
+    font-family: "Orbitron", sans-serif !important;
     font-weight: 600;
     font-style: normal;
     font-size: 3em;
@@ -60,10 +60,10 @@ body {
 }
 
 .customSubheader {
-    font-family: "good-times", sans-serif !important;
+    font-family: "Orbitron", sans-serif !important;
     font-weight: 600;
     font-style: normal;
-    font-size: 1.5em;
+    font-size: 2em;
     padding: 10px 0 25px 0;
 }
 .customText {
@@ -91,6 +91,7 @@ body {
 }
 
 .teamMemberName {
+    font-family: "neue-haas-grotesk-display", sans-serif !important;
     color: #f2711c !important;
     font-size: 1em;
     letter-spacing: 0.1em;
@@ -98,6 +99,7 @@ body {
     margin-top: 5px;
 }
 .teamMemberTitle {
+    font-family: "neue-haas-grotesk-display", sans-serif !important;
     font-size: 0.8em;
     letter-spacing: 0.1em;
     margin: 5px 0 5px 0;
@@ -105,6 +107,7 @@ body {
 }
 
 .teamMemberText {
+    font-family: "neue-haas-grotesk-display", sans-serif !important;
     font-size: 0.8em;
     letter-spacing: 0.1em;
     margin: 5px 0 5px 0;

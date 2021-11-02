@@ -400,10 +400,11 @@ function App() {
           01 DRIFTER AVATAR
         </div>
         <div className='customText'>
-          100% of sale proceeds and royalties will be reinvested.<br /><br />
           Drifter Avatar is the entry point and serves as membership access to Driftopia, Metacity, and all future projects.<br /><br />
           The Drifter Avatar project serves as the beacon for all like-minded individuals wanting to break free from the old system.<br /><br />
           Once we have our community, we will begin to build.<br /><br />
+          
+          100% of sale proceeds and royalties will be reinvested. This project is it's own entity, it is our hope and dreams.<br /><br />
         </div>
       </Container>
 

@@ -17,7 +17,8 @@ $timeline-body-shadow: 1px 3px 9px rgba(0,0,0, .1);
 }
 
 // typography
-p {
+p {    
+    font-family: "neue-haas-grotesk-display", sans-serif !important;
     font-weight: 300;
     line-height: 1.5;
     font-size: 14px;
