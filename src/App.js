@@ -386,9 +386,11 @@ function App() {
           03 THE GATEWAY PROJECT
         </div>
         <div className='customText'>
-          All talent required for Drifter Projects will be crowdsourced from within the community. <br /><br />
-
-          The Drifter foundation will give grants to financially support members to start up their own projects. Each project will be added to the Drifter ecosystem. Drifter holders will receive priority access and benefits to these projects.<br /><br />
+          The Drifter project will serve as an escape route from traditional 9-5 jobs.  <br /><br />
+          All talent required for Drifter Projects will be crowdsourced from within the community.  <br /><br />
+          The Drifter foundation will give grants to members who help in Drifter Projects. <br /><br />
+          Grants will also be given to members to start up their own projects, leading themselves to financial freedom. <br /><br />
+          Each project will be added to the Drifter ecosystem, benefitting the entire community. <br /><br />
         </div>
       </Container>
 
