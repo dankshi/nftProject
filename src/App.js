@@ -312,6 +312,7 @@ function App() {
         )}
       </Container> */}
 
+<div id='testDiv'>test div</div>
       <Image id='coverPhoto' src={coverPhoto} />
       <Container id='customContainer'>
         <div id='welcomeToDriftopia'>
@@ -320,9 +321,7 @@ function App() {
         <div id='welcomeToDriftopiaText'>
           The Drifter Project is a series of projects designed to free people from old-world systems through the use of web3 technology. <br /><br />
 
-          The Drifter Project will build the first physical crypto community. It will be the prototype for a society run by a trustless system. <br /><br />
-
-          It all starts with Drifter Avatars.
+          Together we will build Driftopia, the first physical crypto community, and prototype a mini-society operating on fair systems.
         </div>
         <div id='whitepaperButton'>
           <a href='https://docs.google.com/document/d/184NqMc2SwI4_vRAvWNT0AqSEOC3ySLMQV5jGx5rJsPk/edit?usp=sharing' target="_blank" >
