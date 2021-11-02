@@ -316,7 +316,7 @@ function App() {
       <Image id='coverPhoto' src={coverPhoto} />
       <Container id='customContainer'>
         <div id='welcomeToDriftopia'>
-          BEYOND THE METAVERSE
+        BREAK FREE
         </div>
         <div id='welcomeToDriftopiaText'>
           The Drifter Project is a series of projects designed to free people from old-world systems through the use of web3 technology. <br /><br />
