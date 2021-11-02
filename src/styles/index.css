@@ -1,13 +1,12 @@
 .ui {
-    font-family: 'good-times', sans-serif !important;
+    font-family: "good-times", sans-serif !important;
     font-weight: 200;
     font-style: normal;
-
     /* font-family: "Montserrat" !important; */
-    color: #CCCCCC !important;
+    color: #cccccc !important;
 }
 
-body{
+body {
     /* background-image: url('../assets//images//village.jpg'); */
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -15,118 +14,122 @@ body{
     background-color: #121212;
 }
 
-#welcomeToDriftopia{
-    font-family: 'good-times', sans-serif !important;
+.customButton {
+    display: inline;
+}
+
+.customButtonGrid {
+    padding: 0 0 20px 0 !important;
+}
+#welcomeToDriftopia {
+    font-family: "pirulen", sans-serif !important;
     font-weight: 600;
     font-style: normal;
     font-size: 3em;
     padding: 20px 0 30px 0;
 }
 
-#welcomeToDriftopiaText{
-    font-family: 'neue-haas-grotesk-display',sans-serif !important;
+#welcomeToDriftopiaText {
+    font-family: "neue-haas-grotesk-display", sans-serif !important;
     font-weight: 200;
     font-style: normal;
     font-size: 1.25em;
-    padding: 20px 0px;
+    padding: 20px 0px 50px 0px;
 }
 
-#whitepaperButton{
+#whitepaperButton {
     margin: 20px 0px;
 }
 
-#smartContractContainer{
+#smartContractContainer {
     margin: 20vh;
 }
 
-#mintCostSpread{
+#mintCostSpread {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-#customContainer{
+#customContainer {
     padding: 80px 0 0 0;
 }
 
-#overlayContainer{
-    background-color: #25262C;
-    border-radius: .5em;
+#overlayContainer {
+    background-color: #25262c;
+    border-radius: 0.5em;
     padding: 50px 0;
 }
 
-
-.customSubheader{
-    font-family: 'good-times', sans-serif !important;
+.customSubheader {
+    font-family: "good-times", sans-serif !important;
     font-weight: 600;
     font-style: normal;
     font-size: 1.5em;
     padding: 10px 0 25px 0;
 }
-.customText{
-    font-family: 'neue-haas-grotesk-display',sans-serif !important;
+.customText {
+    font-family: "neue-haas-grotesk-display", sans-serif !important;
     font-weight: 200;
     font-style: normal;
     font-size: 1.25em;
     padding: 5px 0px;
 }
 
-.customTeamMemberName{
-    font-family: 'good-times', sans-serif !important;
+.customTeamMemberName {
+    font-family: "good-times", sans-serif !important;
     font-weight: 600;
     font-style: normal;
     font-size: 1.5em;
     padding: 20px 0 5px 0;
-    color:#1C9DF2;
+    color: #1c9df2;
 }
 
-.customStatistic{
-    color: #1C9DF2 !important;
+.customStatistic {
+    color: #1c9df2 !important;
     font-size: 1.25em;
-    letter-spacing: .1em;
-    padding: 5px;;
+    letter-spacing: 0.1em;
+    padding: 5px;
 }
 
-.teamMemberName{
-    color: #F2711C !important;
+.teamMemberName {
+    color: #f2711c !important;
     font-size: 1em;
-    letter-spacing: .1em;
+    letter-spacing: 0.1em;
     text-transform: uppercase !important;
     margin-top: 5px;
-
 }
-.teamMemberTitle{
-    font-size: .8em;
-    letter-spacing: .1em;
+.teamMemberTitle {
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
     margin: 5px 0 5px 0;
     font-weight: bold;
 }
 
-.teamMemberText{
-    font-size: .8em;
-    letter-spacing: .1em;
+.teamMemberText {
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
     margin: 5px 0 5px 0;
 }
 
-.teamMemberDescription{
-    font-size: .6em;
-    letter-spacing: .1em;
+.teamMemberDescription {
+    font-size: 0.6em;
+    letter-spacing: 0.1em;
     margin-bottom: 5px;
 }
 
-
-.feedback{
-    letter-spacing: .1em;
-    color:#1C9DF2;
+.feedback {
+    letter-spacing: 0.1em;
+    color: #1c9df2;
     margin-bottom: 20px;
 }
 
-.teamMember{
+.teamMember {
     padding: 20px 0 20px 0;
 }
 
-.dividerSpacing{
+.dividerSpacing {
     padding: 50px 0;
 }
 
-#footer{
-    padding:150px 0 100px 0;
+#footer {
+    padding: 150px 0 100px 0;
 }

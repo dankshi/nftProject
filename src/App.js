@@ -311,25 +311,76 @@ function App() {
           </div>
         )}
       </Container> */}
+
       <Image id='coverPhoto' src={coverPhoto} />
       <Container id='customContainer'>
         <div id='welcomeToDriftopia'>
-        BREAK FREE
+          BUILDING FREEDOM
         </div>
         <div id='welcomeToDriftopiaText'>
           The Drifter Project is a series of projects designed to free people from old-world systems through the use of web3 technology. <br /><br />
 
           Together we will build Driftopia, the first physical crypto community, and prototype a mini-society operating on fair systems.
         </div>
-        <div id='whitepaperButton'>
+
+        <Grid className='customButtonGrid'>
+          <div className='customButton'>
+            <a href='https://discord.gg/driftersnft' target="_blank" >
+              <p>
+                <span class="bg"></span>
+                <span class="base"></span>
+                <span class="text">Join the revolution</span>
+              </p>
+            </a>
+          </div>
+          <div className='customButton'>
+            <a class="transparent" href='https://twitter.com/drifters_nft' target="_blank" >
+              <p>
+                <span class="bg"></span>
+                <span class="base"></span>
+                <span class="text">Twitter</span>
+              </p>
+            </a>
+          </div>
+        </Grid>
+        {/* <div id='whitepaperButton'>
           <a href='https://docs.google.com/document/d/184NqMc2SwI4_vRAvWNT0AqSEOC3ySLMQV5jGx5rJsPk/edit?usp=sharing' target="_blank" >
             <Button inverted>Whitepaper</Button>
           </a>
           <a href='discord.gg/driftersnft' target="_blank" >
             <Button inverted>Discord</Button>
           </a>
-        </div>
+        </div> */}
       </Container>
+      {/* <Grid>
+        <div className='customButton'>
+          <a href='discord.gg/driftersnft' target="_blank" >
+            <p>
+              <span class="bg"></span>
+              <span class="base"></span>
+              <span class="text">Join the revolution</span>
+            </p>
+          </a>
+        </div>
+        <div className='customButton'>
+          <a class="white" href="#">
+            <p>
+              <span class="bg"></span>
+              <span class="base"></span>
+              <span class="text">Play Valorant</span>
+            </p>
+          </a>
+        </div>
+        <div className='customButton'>
+          <a class="transparent" href="#">
+            <p>
+              <span class="bg"></span>
+              <span class="base"></span>
+              <span class="text">Play Valorant</span>
+            </p>
+          </a>
+        </div>
+      </Grid> */}
       <Divider hidden />
       <Divider hidden />
       <Container textAlign='center'>
