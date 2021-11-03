@@ -315,12 +315,14 @@ function App() {
       <Image id='coverPhoto' src={coverPhoto} />
       <Container id='customContainer'>
         <div id='welcomeToDriftopia'>
-        RISE
+          RISE
         </div>
         <div id='welcomeToDriftopiaText'>
-        This world was not built for us.<br /><br />
-        We’ve been cornered in a system that takes from the few. We are forced to evolve or die. The ones who rise from these ashes are the chosen who will change the world.<br /><br />
-        Are you a Drifter?
+          This world was not built for us.<br /><br />
+          We have been cornered.<br /><br />
+          Our only options are to evolve or die.<br /><br />
+          The ones who rise from these ashes are chosen to lead the new world.<br /><br />
+          Are you a Drifter?
         </div>
 
         <Grid className='customButtonGrid'>
@@ -405,7 +407,7 @@ function App() {
           You are not alone.<br /><br />
           We are here, we are waiting.
         </div>
-        <Divider hidden/>
+        <Divider hidden />
         <Grid className='customButtonGrid'>
           <div className='customButton'>
             <a href='https://discord.gg/driftersnft' target="_blank" >
@@ -429,11 +431,11 @@ function App() {
           02 DRIFTOPIA
         </div>
         <div className='customText'>
-        First, we will physically divorce ourselves from the old world. Driftopia is a physical eco village built to maximize sustainability and general well-being. It will be the first community to operate solely on blockchain technology.
-        <br /><br />
-        They pricing us out, so we will move out. We choose to evolve.
+          First, we will physically divorce ourselves from the old world. Driftopia is a physical eco village built to maximize sustainability and general well-being. It will be the first community to operate solely on blockchain technology.
+          <br /><br />
+          They pricing us out, so we will move out. We choose to evolve.
         </div>
-        <Divider hidden/>
+        <Divider hidden />
         <Grid className='customButtonGrid'>
           <div className='customButton'>
             <a href='https://discord.gg/driftersnft' target="_blank" >
