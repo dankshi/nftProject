@@ -315,12 +315,12 @@ function App() {
       <Image id='coverPhoto' src={coverPhoto} />
       <Container id='customContainer'>
         <div id='welcomeToDriftopia'>
-          BUILDING FREEDOM
+        RISE
         </div>
         <div id='welcomeToDriftopiaText'>
-          The Drifter Project is a series of projects designed to free people from old-world systems through the use of web3 technology. <br /><br />
-
-          Together we will build Driftopia, the first physical crypto community, and prototype a mini-society operating on fair systems.
+        This world was not built for us.<br /><br />
+        We’ve been cornered in a system that takes from the few. We are forced to evolve or die. The ones who rise from these ashes are the chosen who will change the world.<br /><br />
+        Are you a Drifter?
         </div>
 
         <Grid className='customButtonGrid'>
@@ -400,12 +400,23 @@ function App() {
           01 DRIFTER AVATAR
         </div>
         <div className='customText'>
-          Drifter Avatar is the entry point and serves as membership access to Driftopia, Metacity, and all future projects.<br /><br />
-          The Drifter Avatar project serves as the beacon for all like-minded individuals wanting to break free from the old system.<br /><br />
-          Once we have our community, we will begin to build.<br /><br />
-          
-          100% of sale proceeds and royalties will be reinvested. This project is it's own entity, it is our hope and dreams.<br /><br />
+          The Drifter Avatar serves as your citizenship to the Drifter Nation.<br /><br />
+          It is the beacon call for 11,111 Drifters of this world.<br /><br />
+          You are not alone.<br /><br />
+          We are here, we are waiting.
         </div>
+        <Divider hidden/>
+        <Grid className='customButtonGrid'>
+          <div className='customButton'>
+            <a href='https://discord.gg/driftersnft' target="_blank" >
+              <p>
+                <span class="bg"></span>
+                <span class="base"></span>
+                <span class="text">I Accept</span>
+              </p>
+            </a>
+          </div>
+        </Grid>
       </Container>
 
 
@@ -418,11 +429,22 @@ function App() {
           02 DRIFTOPIA
         </div>
         <div className='customText'>
-          Driftopia is a physical eco-village built around sustainability. <br /><br />
-          Our generation is being priced out by the old world, so we will build our own community.<br /><br />
-          Driftopia aims to be net-zero and self-sustaining, reimagining the way we build, live, and commune. <br /><br />
-          It is the physical manifestation of web3.
+        First, we will physically divorce ourselves from the old world. Driftopia is a physical eco village built to maximize sustainability and general well-being. It will be the first community to operate solely on blockchain technology.
+        <br /><br />
+        They pricing us out, so we will move out. We choose to evolve.
         </div>
+        <Divider hidden/>
+        <Grid className='customButtonGrid'>
+          <div className='customButton'>
+            <a href='https://discord.gg/driftersnft' target="_blank" >
+              <p>
+                <span class="bg"></span>
+                <span class="base"></span>
+                <span class="text">evolve</span>
+              </p>
+            </a>
+          </div>
+        </Grid>
       </Container>
 
 
