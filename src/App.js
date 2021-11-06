@@ -7,7 +7,7 @@ import drifter2 from "./assets/images/2.png";
 import drifter4 from "./assets/images/4.png";
 import staking from "./assets/images/staking mechanism.png";
 import logo from "./assets/images/logo.png";
-import coverPhoto from "./assets/images/coverphoto.png";
+import coverPhoto from "./assets/images/freedom.png";
 import { Button, Container, Header, Image, Menu, Progress, Segment, Label, Grid, Divider, Step, List, Card, Icon, Statistic } from 'semantic-ui-react'
 
 function App() {
@@ -314,18 +314,8 @@ function App() {
 
       <Image id='coverPhoto' src={coverPhoto} />
       <Container id='customContainer'>
-        <div id='welcomeToDriftopia'>
-          RISE
-        </div>
-        <div id='welcomeToDriftopiaText'>
-          This world was not built for us.<br /><br />
-          We have been cornered.<br /><br />
-          Our only options are to evolve or die.<br /><br />
-          The ones who rise from these ashes are chosen to lead the new world.<br /><br />
-          Are you a Drifter?
-        </div>
 
-        <Grid className='customButtonGrid'>
+        <Grid className='customButtonGrid' centered>
           <div className='customButton'>
             <a href='https://discord.gg/driftersnft' target="_blank" >
               <p>
