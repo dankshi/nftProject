@@ -8,7 +8,10 @@ import drifter4 from "./assets/images/4.png";
 import staking from "./assets/images/staking mechanism.png";
 import logo from "./assets/images/logo.png";
 import coverPhoto from "./assets/images/freedom.png";
-import { Button, Container, Header, Image, Menu, Progress, Segment, Label, Grid, Divider, Step, List, Card, Icon, Statistic } from 'semantic-ui-react'
+import menuLogo from "./assets/images/menuLogo.png";
+import Button from '@mui/material/Button';
+import { Container, Header, Image, Menu, Progress, Segment, Label, Grid, Divider, Step, List, Card, Icon, Statistic } from 'semantic-ui-react'
+
 
 function App() {
   const dispatch = useDispatch();
@@ -104,8 +107,8 @@ function App() {
   }, [blockchain.account]);
 
   return (
-    <div>
-      <Menu fixed='top' inverted>
+    <div id='scroll0'>
+      {/* <Menu fixed='top' inverted>
         <Container>
           <Menu.Item header>DRIFTERS</Menu.Item>
           <Menu.Menu position='right'>
@@ -117,7 +120,7 @@ function App() {
             </Menu.Item>
           </Menu.Menu>
         </Container>
-      </Menu>
+      </Menu> */}
       {/* <Container textAlign='center' style={{ marginTop: '7em' }}>
         <Header inverted>
         </Header>
@@ -312,29 +315,53 @@ function App() {
         )}
       </Container> */}
 
-      <Image id='coverPhoto' src={coverPhoto} />
-      <Container id='customContainer'>
+      <div id='menuBar'>
+        <Image id='menuLogo' src={menuLogo} />
+        <a id='textLogo' href={`#scroll0`}>
+          DRIFTERS
+        </a>
+        <a href={`#scroll1`}>
+          AVATAR
+        </a>
+        <a href={`#scroll2`}>
+          DRIFTOPIA
+        </a>
+        <a href={`#scroll3`}>
+          GATEWAY
+        </a>
+        <a href={`#scroll4`}>
+          METACITY
+        </a>
+        <a href={`#scroll5`}>
+          AURA
+        </a>
+        <a href={`#scroll6`}>
+          ROADMAP
+        </a>
+        <a href={`#scroll7`}>
+          TEAM
+        </a>
+        <div id='menuRight'>
+          <a href='https://discord.gg/driftersnft' target="_blank" >
+            <Button variant="contained" size='large'>Join</Button>
+          </a>
+          <a href='https://twitter.com/drifters_nft' target="_blank" >
+            <Button variant="outlined" size='large'>Twitter</Button>
+          </a>
+        </div>
+      </div>
 
-        <Grid className='customButtonGrid' centered>
-          <div className='customButton'>
-            <a href='https://discord.gg/driftersnft' target="_blank" >
-              <p>
-                <span class="bg"></span>
-                <span class="base"></span>
-                <span class="text">Join the revolution</span>
-              </p>
-            </a>
-          </div>
-          <div className='customButton'>
-            <a class="transparent" href='https://twitter.com/drifters_nft' target="_blank" >
-              <p>
-                <span class="bg"></span>
-                <span class="base"></span>
-                <span class="text">Twitter</span>
-              </p>
-            </a>
-          </div>
-        </Grid>
+      <div id='landingPageDiv'>
+        <div id='landingPageContent'>
+          <div id='landingPageHeader'>FREEDOM SEEKER</div>
+          <div id='landingPageText'>Creating a web3 framework for achieving freedom and abundant living.</div>
+          <a href='https://discord.gg/driftersnft' target="_blank" >
+            <Button variant="contained" size='large'>Join</Button>
+          </a>
+        </div>
+      </div>
+
+      <Container id='customContainer'>
         {/* <div id='whitepaperButton'>
           <a href='https://docs.google.com/document/d/184NqMc2SwI4_vRAvWNT0AqSEOC3ySLMQV5jGx5rJsPk/edit?usp=sharing' target="_blank" >
             <Button inverted>Whitepaper</Button>
@@ -376,42 +403,28 @@ function App() {
       <Divider hidden />
       <Divider hidden />
       <Container textAlign='center'>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/FattbSQnlTQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
       </Container>
       {/* <Container id='overlayContainer'>
         testttt
       </Container> */}
 
+      <div id='scroll1'></div>
       <Container>
-        <div className='dividerSpacing'>
-          <Divider />
-        </div>
-
         <div className='customSubheader'>
           01 DRIFTER AVATAR
         </div>
         <div className='customText'>
           The Drifter Avatar serves as your citizenship to the Drifter Nation.<br /><br />
-          It is the beacon call for 11,111 Drifters of this world.<br /><br />
-          You are not alone.<br /><br />
-          We are here, we are waiting.
+          It is a utility token that serves as access to Driftopia, Metacity, and its benefits.
+
         </div>
         <Divider hidden />
-        <Grid className='customButtonGrid'>
-          <div className='customButton'>
-            <a href='https://discord.gg/driftersnft' target="_blank" >
-              <p>
-                <span class="bg"></span>
-                <span class="base"></span>
-                <span class="text">I Accept</span>
-              </p>
-            </a>
-          </div>
-        </Grid>
+        <a href='https://discord.gg/driftersnft' target="_blank" >
+        </a>
       </Container>
 
 
+      <div id='scroll2'></div>
       <Container>
         <div className='dividerSpacing'>
           <Divider />
@@ -421,25 +434,16 @@ function App() {
           02 DRIFTOPIA
         </div>
         <div className='customText'>
-          First, we will physically divorce ourselves from the old world. Driftopia is a physical eco village built to maximize sustainability and general well-being. It will be the first community to operate solely on blockchain technology.
+          Driftopia is a physical eco village built to maximize sustainability and general well-being.<br /><br />
+          It will be the first community to operate solely on blockchain technology.
           <br /><br />
           They pricing us out, so we will move out. We choose to evolve.
         </div>
         <Divider hidden />
-        <Grid className='customButtonGrid'>
-          <div className='customButton'>
-            <a href='https://discord.gg/driftersnft' target="_blank" >
-              <p>
-                <span class="bg"></span>
-                <span class="base"></span>
-                <span class="text">evolve</span>
-              </p>
-            </a>
-          </div>
-        </Grid>
       </Container>
 
 
+      <div id='scroll3'></div>
       <Container>
         <div className='dividerSpacing'>
           <Divider />
@@ -458,6 +462,7 @@ function App() {
       </Container>
 
 
+      <div id='scroll4'></div>
       <Container>
         <div className='dividerSpacing'>
           <Divider />
@@ -472,6 +477,7 @@ function App() {
       </Container>
 
 
+      <div id='scroll5'></div>
       <Container>
         <div className='dividerSpacing'>
           <Divider />
@@ -481,11 +487,14 @@ function App() {
           05 AURA
         </div>
         <div className='customText'>
-          $AURA is the Driftopian currency that is used in both Driftopia and Metacity. This means that earning $AURA in Metacity will yield real-world utility, such as exchanging it for rent and food in Driftopia. Members are able to contribute and participate in the Drifter ecosystem physically and/or digitally.<br /><br />
+          $AURA is the Driftopian currency that is used in both Driftopia and Metacity.<br /><br />
+          This means that earning $AURA in Metacity will yield real-world utility, such as exchanging it for rent and food in Driftopia.<br /><br />
+          Members are able to contribute and participate in the Drifter ecosystem physically and/or digitally.<br /><br />
         </div>
       </Container>
 
 
+      <div id='scroll6'></div>
       <Container>
         <div className='dividerSpacing'>
           <Divider />
@@ -555,8 +564,8 @@ function App() {
         </div>
       </Container>
 
+      <div id='scroll7'></div>
       <Container>
-
         <div className='dividerSpacing'>
           <Divider />
         </div>

@@ -18,23 +18,95 @@ body {
     display: inline;
 }
 
-.customButtonGrid {
-    padding: 0 0 20px 0 !important;
-}
-#welcomeToDriftopia {
-    font-family: "Orbitron", sans-serif !important;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 3em;
-    padding: 20px 0 30px 0;
+#landingPageDiv{
+    padding:0;
+    margin-top: 80px;
+    position:relative;
+    width:100%;
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0) ), url('../assets//images//freedom.png');
+    background-position: center top;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    padding-bottom: 37.934668%;
+    height: 0;
 }
 
-#welcomeToDriftopiaText {
-    font-family: "neue-haas-grotesk-display", sans-serif !important;
-    font-weight: 200;
-    font-style: normal;
-    font-size: 1.25em;
-    padding: 20px 0px 50px 0px;
+#landingPageContent{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
+    text-align: center;
+}
+
+#landingPageHeader{
+    font-family: "Orbitron", sans-serif !important;
+    color:white;
+    font-weight:600;
+    font-size: 30px;
+    margin: 30px 0;
+}
+
+#landingPageText{
+    font-family: 'Montserrat';
+    color:white;
+    margin: 30px 0;
+    font-size: 20px;
+}
+
+#menuBar{
+    z-index: 1;
+    display: flex;
+    position: fixed;
+    top:0;
+    left:0;
+    height:80px;
+    width:100%;
+    background-color: #121212;
+    color:white;
+    line-height: 80px;
+    font-family: 'Montserrat';
+    font-weight:600;
+    border-bottom: #272727 1px solid;
+}
+
+#menuBar a{
+    margin: 0 10px;
+    cursor:pointer;
+    color:white;
+}
+
+#menuBar a:hover{
+    color:#1976D2;
+}
+
+
+#menuRight{
+    margin-left: auto;
+    margin-right:20px;
+}
+
+#menuLogo{
+    padding:20px 0;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+#textLogo{
+    font-size:20px;
+    font-family: 'Orbitron';
+    padding-left:0;
+    padding-right:10px;
+}
+
+#textLogo:hover{
+    color:white !important;
+}
+
+.customButtonGrid {
+    padding: 0 0 20px 0 !important;
 }
 
 #whitepaperButton {
@@ -67,7 +139,7 @@ body {
     padding: 10px 0 25px 0;
 }
 .customText {
-    font-family: "neue-haas-grotesk-display", sans-serif !important;
+    font-family: "Montserrat", sans-serif !important;
     font-weight: 200;
     font-style: normal;
     font-size: 1.25em;
@@ -75,7 +147,7 @@ body {
 }
 
 .customTeamMemberName {
-    font-family: "good-times", sans-serif !important;
+    font-family: "Montserrat", sans-serif !important;
     font-weight: 600;
     font-style: normal;
     font-size: 1.5em;
