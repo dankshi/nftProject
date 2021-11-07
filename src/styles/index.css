@@ -18,12 +18,12 @@ body {
     display: inline;
 }
 
-#landingPageDiv{
-    padding:0;
+#landingPageDiv {
+    padding: 0;
     margin-top: 80px;
-    position:relative;
-    width:100%;
-    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0) ), url('../assets//images//freedom.png');
+    position: relative;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url("../assets//images//freedom.png");
     background-position: center top;
     background-size: 100% auto;
     background-repeat: no-repeat;
@@ -31,78 +31,105 @@ body {
     height: 0;
 }
 
-#landingPageContent{
+#landingPageContent {
     margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
     text-align: center;
 }
 
-#landingPageHeader{
+#landingPageHeader {
     font-family: "Orbitron", sans-serif !important;
-    color:white;
-    font-weight:600;
+    color: white;
+    font-weight: 600;
     font-size: 30px;
     margin: 30px 0;
 }
 
-#landingPageText{
-    font-family: 'Montserrat';
-    color:white;
+#landingPageText {
+    font-family: "Montserrat";
+    color: white;
     margin: 30px 0;
     font-size: 20px;
 }
 
-#menuBar{
+@media screen and (max-width: 600px) {
+    #landingPageDiv {
+        position: relative;
+        border: 1px solid blue;
+        height: 100vh;
+        padding-bottom: 0;
+        background-size: auto 100vh;
+    }
+
+    #landingPageContent {
+        width: 100vh;
+        border: 1px solid red;
+    }
+
+    #landingPageHeader {
+        font-family: "Orbitron", sans-serif !important;
+        color: white;
+        font-weight: 600;
+        font-size: 20px;
+        margin: 30px 0;
+        border: 1px solid red;
+    }
+
+    #landingPageText {
+        font-size: 10px;
+    }
+}
+
+#menuBar {
     z-index: 1;
     display: flex;
     position: fixed;
-    top:0;
-    left:0;
-    height:80px;
-    width:100%;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
     background-color: #121212;
-    color:white;
+    color: white;
     line-height: 80px;
-    font-family: 'Montserrat';
-    font-weight:600;
+    font-family: "Montserrat";
+    font-weight: 600;
     border-bottom: #272727 1px solid;
 }
 
-#menuBar a{
+#menuBar a {
     margin: 0 10px;
-    cursor:pointer;
-    color:white;
+    cursor: pointer;
+    color: white;
 }
 
-#menuBar a:hover{
-    color:#1976D2;
+#menuBar a:hover {
+    color: #1976d2;
 }
 
-
-#menuRight{
+#menuRight {
     margin-left: auto;
-    margin-right:20px;
+    margin-right: 20px;
 }
 
-#menuLogo{
-    padding:20px 0;
+#menuLogo {
+    padding: 20px 0;
     margin-left: 20px;
     margin-right: 10px;
 }
 
-#textLogo{
-    font-size:20px;
-    font-family: 'Orbitron';
-    padding-left:0;
-    padding-right:10px;
+#textLogo {
+    font-size: 20px;
+    font-family: "Orbitron";
+    padding-left: 0;
+    padding-right: 10px;
 }
 
-#textLogo:hover{
-    color:white !important;
+#textLogo:hover {
+    color: white !important;
 }
 
 .customButtonGrid {
