@@ -2,14 +2,6 @@ import React, { useEffect, useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { connect } from "./redux/blockchain/blockchainActions";
 import { fetchData } from "./redux/data/dataActions";
-import drifter1 from "./assets/images/1.png";
-import drifter2 from "./assets/images/2.png";
-import drifter4 from "./assets/images/4.png";
-import avatarGif from "./assets/images/avatar.gif";
-import staking from "./assets/images/staking mechanism.png";
-import logo from "./assets/images/logo.png";
-import coverPhoto from "./assets/images/freedom.png";
-import menuLogo from "./assets/images/menuLogo.png";
 import { Button, Container, Header, Image, Menu, Progress, Segment, Label, Grid, Divider, Step, List, Card, Icon, Statistic } from 'semantic-ui-react'
 
 
@@ -303,7 +295,6 @@ function App() {
       </Container>
 
       <div id='menuBar'>
-        <Image id='menuLogo' src={menuLogo} />
         <a id='textLogo' href={`#home`}>
           DRIFTERS
         </a>

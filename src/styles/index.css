@@ -23,7 +23,6 @@ body {
     margin-top: 80px;
     position: relative;
     width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url("../assets//images//freedom.png");
     background-position: center top;
     background-size: 100% auto;
     background-repeat: no-repeat;
@@ -102,7 +101,6 @@ body {
     margin-top: 80px;
     position: relative;
     width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), url("../assets//images//driftopia.png");
     background-position: center top;
     background-size: 100% auto;
     background-repeat: no-repeat;
@@ -119,7 +117,6 @@ body {
 @media screen and (max-width: 600px) {
 
     #driftopiaContainer {
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url("../assets//images//driftopia.png");
         position: relative;
         height: 100vh;
         padding-bottom: 0;
