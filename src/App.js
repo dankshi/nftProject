@@ -107,7 +107,7 @@ function App() {
   }, [blockchain.account]);
 
   return (
-    <div id='scroll0'>
+    <div id='home'>
       {/* <Menu fixed='top' inverted>
         <Container>
           <Menu.Item header>DRIFTERS</Menu.Item>
@@ -317,28 +317,28 @@ function App() {
 
       <div id='menuBar'>
         <Image id='menuLogo' src={menuLogo} />
-        <a id='textLogo' href={`#scroll0`}>
+        <a id='textLogo' href={`#home`}>
           DRIFTERS
         </a>
-        <a href={`#scroll1`}>
+        <a href={`#avatar`}>
           AVATAR
         </a>
-        <a href={`#scroll2`}>
+        <a href={`#driftopia`}>
           DRIFTOPIA
         </a>
-        <a href={`#scroll3`}>
+        <a href={`#gateway`}>
           GATEWAY
         </a>
-        <a href={`#scroll4`}>
+        <a href={`#metacity`}>
           METACITY
         </a>
-        <a href={`#scroll5`}>
+        <a href={`#aura`}>
           AURA
         </a>
-        <a href={`#scroll6`}>
+        <a href={`#roadmap`}>
           ROADMAP
         </a>
-        <a href={`#scroll7`}>
+        <a href={`#team`}>
           TEAM
         </a>
         <div id='menuRight'>
@@ -408,7 +408,7 @@ function App() {
         testttt
       </Container> */}
 
-      <div id='scroll1'></div>
+      <div id='avatar'></div>
       <Container>
         <div className='customSubheader'>
           01 DRIFTER AVATAR
@@ -424,7 +424,7 @@ function App() {
       </Container>
 
 
-      <div id='scroll2'></div>
+      <div id='driftopia'></div>
       <Container>
         <div className='dividerSpacing'>
           <Divider />
@@ -443,7 +443,7 @@ function App() {
       </Container>
 
 
-      <div id='scroll3'></div>
+      <div id='gateway'></div>
       <Container>
         <div className='dividerSpacing'>
           <Divider />
@@ -462,7 +462,7 @@ function App() {
       </Container>
 
 
-      <div id='scroll4'></div>
+      <div id='metacity'></div>
       <Container>
         <div className='dividerSpacing'>
           <Divider />
@@ -477,7 +477,7 @@ function App() {
       </Container>
 
 
-      <div id='scroll5'></div>
+      <div id='aura'></div>
       <Container>
         <div className='dividerSpacing'>
           <Divider />
@@ -494,7 +494,7 @@ function App() {
       </Container>
 
 
-      <div id='scroll6'></div>
+      <div id='roadmap'></div>
       <Container>
         <div className='dividerSpacing'>
           <Divider />
@@ -564,7 +564,7 @@ function App() {
         </div>
       </Container>
 
-      <div id='scroll7'></div>
+      <div id='team'></div>
       <Container>
         <div className='dividerSpacing'>
           <Divider />
