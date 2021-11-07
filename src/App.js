@@ -407,9 +407,8 @@ function App() {
       <div id='gateway'></div>
       <Container>
         <div className='dividerSpacing'>
-          <Divider />
+          <Divider hidden/>
         </div>
-
         <div className='customSubheader'>
           03 THE GATEWAY PROJECT
         </div>
