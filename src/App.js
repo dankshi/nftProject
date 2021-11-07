@@ -5,6 +5,7 @@ import { fetchData } from "./redux/data/dataActions";
 import drifter1 from "./assets/images/1.png";
 import drifter2 from "./assets/images/2.png";
 import drifter4 from "./assets/images/4.png";
+import avatarGif from "./assets/images/avatar.gif";
 import staking from "./assets/images/staking mechanism.png";
 import logo from "./assets/images/logo.png";
 import coverPhoto from "./assets/images/freedom.png";
@@ -360,88 +361,48 @@ function App() {
           </a>
         </div>
       </div>
-
-      <Container id='customContainer'>
-        {/* <div id='whitepaperButton'>
-          <a href='https://docs.google.com/document/d/184NqMc2SwI4_vRAvWNT0AqSEOC3ySLMQV5jGx5rJsPk/edit?usp=sharing' target="_blank" >
-            <Button inverted>Whitepaper</Button>
-          </a>
-          <a href='discord.gg/driftersnft' target="_blank" >
-            <Button inverted>Discord</Button>
-          </a>
-        </div> */}
-      </Container>
-      {/* <Grid>
-        <div className='customButton'>
-          <a href='discord.gg/driftersnft' target="_blank" >
-            <p>
-              <span class="bg"></span>
-              <span class="base"></span>
-              <span class="text">Join the revolution</span>
-            </p>
-          </a>
-        </div>
-        <div className='customButton'>
-          <a class="white" href="#">
-            <p>
-              <span class="bg"></span>
-              <span class="base"></span>
-              <span class="text">Play Valorant</span>
-            </p>
-          </a>
-        </div>
-        <div className='customButton'>
-          <a class="transparent" href="#">
-            <p>
-              <span class="bg"></span>
-              <span class="base"></span>
-              <span class="text">Play Valorant</span>
-            </p>
-          </a>
-        </div>
-      </Grid> */}
-      <Divider hidden />
-      <Divider hidden />
+      
+      <div id='avatar'>
       <Container textAlign='center'>
-      </Container>
-      {/* <Container id='overlayContainer'>
-        testttt
-      </Container> */}
-
-      <div id='avatar'></div>
-      <Container>
         <div className='customSubheader'>
           01 DRIFTER AVATAR
         </div>
         <div className='customText'>
           The Drifter Avatar serves as your citizenship to the Drifter Nation.<br /><br />
-          It is a utility token that serves as access to Driftopia, Metacity, and its benefits.
-
+          It is a utility token that serves as exclusive access to the Drifter ecosystem.
         </div>
+        <img id='avatarGif' src={avatarGif}/>
+        
         <Divider hidden />
+        <a href='https://discord.gg/driftersnft' target="_blank" >
+            <Button className='customButton' variant="contained" size='large'>Join</Button>
+          </a>
         <a href='https://discord.gg/driftersnft' target="_blank" >
         </a>
       </Container>
-
+      </div>
 
       <div id='driftopia'></div>
-      <Container>
-        <div className='dividerSpacing'>
-          <Divider />
+      <div id='driftopiaContainer'>
+        <div id='driftopiaContent'>
+          <div id='landingPageHeader'>
+            02 DRIFTOPIA
+          </div>
+          <div id='landingPageText'>
+            The current housing system is pricing us out.<br /><br />
+            Driftopia is a physical eco-village that operates on web3 infrastructure and principles.<br /><br />
+            The village will pioneer a system of living that enriches its residents.<br /><br />
+            Drifter Avatar Holders will be given priority access and benefits.<br /><br />
+            
+          <a href='https://discord.gg/driftersnft' target="_blank" >
+            <Button className='customButton' variant="contained" size='large'>Join</Button>
+          </a>
+          <a href='https://docs.google.com/document/d/184NqMc2SwI4_vRAvWNT0AqSEOC3ySLMQV5jGx5rJsPk/edit?usp=sharing' target="_blank" >
+            <Button className='customButton'  variant="outlined" size='large'>Learn More</Button>
+          </a>
+          </div>
         </div>
-
-        <div className='customSubheader'>
-          02 DRIFTOPIA
-        </div>
-        <div className='customText'>
-          Driftopia is a physical eco village built to maximize sustainability and general well-being.<br /><br />
-          It will be the first community to operate solely on blockchain technology.
-          <br /><br />
-          They pricing us out, so we will move out. We choose to evolve.
-        </div>
-        <Divider hidden />
-      </Container>
-
+      </div>
 
       <div id='gateway'></div>
       <Container>

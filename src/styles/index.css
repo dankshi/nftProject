@@ -15,7 +15,7 @@ body {
 }
 
 .customButton {
-    display: inline;
+    margin: 0 10px 0 0 !important;
 }
 
 #landingPageDiv {
@@ -59,7 +59,6 @@ body {
 @media screen and (max-width: 600px) {
     #landingPageDiv {
         position: relative;
-        border: 1px solid blue;
         height: 100vh;
         padding-bottom: 0;
         background-size: auto 100vh;
@@ -67,7 +66,6 @@ body {
 
     #landingPageContent {
         width: 100vh;
-        border: 1px solid red;
     }
 
     #landingPageHeader {
@@ -76,11 +74,62 @@ body {
         font-weight: 600;
         font-size: 20px;
         margin: 30px 0;
-        border: 1px solid red;
     }
 
     #landingPageText {
         font-size: 10px;
+    }
+}
+
+#avatarGif {
+    width: 500px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+#avatar {
+    padding-top: 80px;
+}
+
+@media screen and (max-width: 600px) {
+    #avatarGif {
+        width: 250px;
+    }
+}
+
+#driftopiaContainer {
+    padding: 0;
+    margin-top: 80px;
+    position: relative;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), url("../assets//images//driftopia.png");
+    background-position: center top;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+#driftopiaContent {
+    margin-left: 300px;
+    padding-top: 150px;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    #driftopiaContainer {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url("../assets//images//driftopia.png");
+        position: relative;
+        height: 100vh;
+        padding-bottom: 0;
+        background-size: auto 100vh;
+        text-align: center;
+    }
+    
+    #driftopiaContent {
+        margin-left: 0;
+        padding-top: 50px;
     }
 }
 
