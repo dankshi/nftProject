@@ -389,7 +389,6 @@ function App() {
             DRIFTOPIA
           </div>
           <div id='landingPageText'>
-            The current housing system is pricing us out.<br /><br />
             Driftopia is a physical eco-village that operates on web3 infrastructure and principles.<br /><br />
             The village will pioneer a system of living that enriches its residents.<br /><br />
             Drifter Avatar Holders will be given priority access and benefits.<br /><br />
