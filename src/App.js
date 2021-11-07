@@ -365,7 +365,7 @@ function App() {
       <div id='avatar'>
       <Container textAlign='center'>
         <div className='customSubheader'>
-          01 DRIFTER AVATAR
+          DRIFTER AVATAR
         </div>
         <div className='customText'>
           The Drifter Avatar serves as your citizenship to the Drifter Nation.<br /><br />
@@ -386,7 +386,7 @@ function App() {
       <div id='driftopiaContainer'>
         <div id='driftopiaContent'>
           <div id='landingPageHeader'>
-            02 DRIFTOPIA
+            DRIFTOPIA
           </div>
           <div id='landingPageText'>
             The current housing system is pricing us out.<br /><br />
@@ -410,7 +410,7 @@ function App() {
           <Divider hidden/>
         </div>
         <div className='customSubheader'>
-          03 THE GATEWAY PROJECT
+          THE GATEWAY PROJECT
         </div>
         <div className='customText'>
           The Drifter project will serve as an escape route from traditional 9-5 jobs.  <br /><br />
@@ -429,7 +429,7 @@ function App() {
         </div>
 
         <div className='customSubheader'>
-          04 METACITY
+          METACITY
         </div>
         <div className='customText'>
           Metacity an open-world futuristic metropolis. Members are able to own land, create and trade assets, and earn real-world rewards.<br /><br />
@@ -444,7 +444,7 @@ function App() {
         </div>
 
         <div className='customSubheader'>
-          05 AURA
+          AURA
         </div>
         <div className='customText'>
           $AURA is the Driftopian currency that is used in both Driftopia and Metacity.<br /><br />
