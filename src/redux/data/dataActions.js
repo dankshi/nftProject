@@ -68,6 +68,23 @@ export const fetchData = (account) => {
           .blockchain.smartContract.methods.whitelisted(account)
           .call();
         }
+      let tokenIds = await store
+        .getState()
+        .blockchain.smartContract.methods.walletOfOwner("0x0ec4928146217b484330d373757d8ac3343058ff")
+        .call()
+      let stakedTokenIds = [];
+      let stakedTokenCounts = await store
+        .getState()
+        .blockchain.stakingContract.methods.numberOfTokensStakedFor("0x0ec4928146217b484330d373757d8ac3343058ff")
+        .call()
+      for (let i = 0; i < stakedTokenCounts; i++){
+          let stakedTokenId = await store
+            .getState()
+            .blockchain.stakingContract.methods.stakedTokenFor("0x0ec4928146217b484330d373757d8ac3343058ff", i)
+            .call()
+          stakedTokenIds.push(stakedTokenId)
+      }
+
       dispatch(
         fetchDataSuccess({
           name,
@@ -79,7 +96,9 @@ export const fetchData = (account) => {
           maxMintAmount,
           maxPrivateMintAmount,
           privateSaleCost,
-          isUserWhitelisted
+          isUserWhitelisted,
+          tokenIds,
+          stakedTokenIds,
         })
       );
     } catch (err) {

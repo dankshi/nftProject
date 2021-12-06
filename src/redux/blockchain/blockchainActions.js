@@ -2,6 +2,7 @@
 import Web3EthContract from "web3-eth-contract";
 import Web3 from "web3";
 import SmartContract from "../../contracts/NCC.json";
+import StakingContract from "../../contracts/NFTStakingPool.json"
 // log
 import { fetchData } from "../data/dataActions";
 
@@ -53,10 +54,15 @@ export const connect = () => {
             SmartContract,
             "0xd7865289BD4B4B971AF778379D2F94C2faa94DE3"
           );
+          const StakingContractObj = new Web3EthContract(
+              StakingContract,
+              "0x81F9549ACa8bf9382Ba641D7AF57C80ACd975ba0"
+          );
           dispatch(
             connectSuccess({
               account: accounts[0],
               smartContract: SmartContractObj,
+              stakingContract: StakingContractObj,
               web3: web3,
             })
           );
